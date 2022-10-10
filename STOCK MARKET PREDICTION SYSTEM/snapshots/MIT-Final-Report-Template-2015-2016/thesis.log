@@ -1,0 +1,255 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.22)  10 APR 2016 22:01
+entering extended mode
+**thesis.tex
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\thesis.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
+, bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
+ian, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
+ kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
+-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
+ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
+elsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\subfigure.sty
+Package: subfigure 1995/03/06 v2.0 subfigure package
+
+Package: subfigure 1995/03/06 v2.0
+\c@subfigure=\count88
+\c@lofdepth=\count89
+\c@subtable=\count90
+\c@lotdepth=\count91
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\acronym.sty)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen103
+)
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\lastpage.sty
+Package: lastpage 1994/06/25 v0.1b LaTeX2e package for refs to last page number (JPG)
+)
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\fancyhdr.sty
+\headwidth=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count92
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\thesis.aux
+
+LaTeX Warning: Label `fig:mit' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+ (C:\Users\geetesh\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count93
+\scratchdimen=\dimen107
+\scratchbox=\box26
+\nofMPsegments=\count94
+\nofMParguments=\count95
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen108
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
+\everyMPtoPDFconversion=\toks16
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\cover.tex
+<C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg, id=1, 310.15875pt x 357.335pt>
+File: C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg Graphic file (type jpg)
+
+<use C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg>
+Package pdftex.def Info: C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg used on input line 36.
+(pdftex.def)             Requested size: 90.33612pt x 104.07704pt.
+) [1
+
+{C:/Users/geetesh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo
+.jpg>]
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\certificate.tex
+File: C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg Graphic file (type jpg)
+
+<use C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg>
+Package pdftex.def Info: C:/Sheetal_college/Latex/MIT-IT-Template2/MIT_logo.jpg used on input line 10.
+(pdftex.def)             Requested size: 90.33612pt x 104.07704pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 38.
+
+Overfull \hbox (14.595pt too wide) in paragraph at lines 38--44
+[][] 
+ []
+
+) [1] (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\acknowledgements.tex)
+! Missing number, treated as zero.
+<to be read again> 
+                   \hfil 
+l.48 \newpage
+             
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[1
+
+] (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\abstract.tex
+Missing character: There is no ’ in font cmr12!
+Missing character: There is no ’ in font cmr12!
+) [1
+
+]
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\thesis.lof)
+\tf@lof=\write3
+ [2
+
+]
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\thesis.lot)
+\tf@lot=\write4
+ [3
+
+]
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\thesis.toc)
+\tf@toc=\write5
+ [4
+
+]
+! Undefined control sequence.
+<argument> ps@\fancy 
+                     
+l.71 \pagestyle{\fancy}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \undefinedpagestyle 
+                               
+l.71 \pagestyle{\fancy}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter1.tex
+Chapter 1.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter2.tex [1
+
+]
+Chapter 2.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter3.tex [2
+
+]
+Chapter 3.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter4.tex [3
+
+]
+Chapter 4.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter5.tex [4
+
+]
+Chapter 5.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter6.tex [5
+
+]
+Chapter 6.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\chapter7.tex [6
+
+]
+Chapter 7.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\conclusion.tex [7
+
+]
+Chapter 8.
+) (C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\references.tex [8
+
+])
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\appendix.tex [9
+
+]) AED: lastpage setting LastPage [10
+
+]
+(C:\Sheetal_college\MIT-Final-Report-Template-2015-2016\thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1429 strings out of 493921
+ 20700 string characters out of 3147276
+ 68530 words of memory out of 3000000
+ 4698 multiletter control sequences out of 15000+200000
+ 8500 words of font info for 30 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,6n,40p,360b,298s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr12.pfb>
+Output written on thesis.pdf (17 pages, 78955 bytes).
+PDF statistics:
+ 66 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

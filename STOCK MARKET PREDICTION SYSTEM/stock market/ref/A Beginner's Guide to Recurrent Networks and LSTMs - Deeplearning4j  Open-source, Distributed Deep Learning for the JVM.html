@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head>
+<style>.gitter-hidden{box-sizing:border-box;display:none}.gitter-icon{box-sizing:border-box;width:22px;height:22px;fill:currentColor}.gitter-chat-embed{box-sizing:border-box;z-index:100;position:fixed;top:0;left:60%;bottom:0;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;background-color:#fff;border-left:1px solid #333;box-shadow:-12px 0 18px 0 rgba(50,50,50,.3);transition:-webkit-transform .3s cubic-bezier(.16,.22,.22,1.7);transition:transform .3s cubic-bezier(.16,.22,.22,1.7);transition:transform .3s cubic-bezier(.16,.22,.22,1.7),-webkit-transform .3s cubic-bezier(.16,.22,.22,1.7)}@context border-box{.gitter-chat-embed{box-sizing:border-box;background-color:#fff}}.gitter-chat-embed.is-collapsed:not(.is-loading){box-sizing:border-box;-webkit-transform:translateX(110%);transform:translateX(110%)}.gitter-chat-embed:after{box-sizing:border-box;content:"";z-index:-1;position:absolute;top:0;left:100%;bottom:0;right:-100%;background-color:#fff}@context border-box{.gitter-chat-embed:after{box-sizing:border-box;background-color:#fff}}@media(max-width:1150px){.gitter-chat-embed{box-sizing:border-box;left:45%}}@media(max-width:944px){.gitter-chat-embed{box-sizing:border-box;left:30%}}@media(max-width:600px){.gitter-chat-embed{box-sizing:border-box;left:15%}}@media(max-width:500px){.gitter-chat-embed{box-sizing:border-box;left:0;border-left:none}}.gitter-chat-embed>iframe{box-sizing:border-box;-webkit-box-flex:1;-ms-flex:1;flex:1;width:100%;height:100%;border:0}.gitter-chat-embed-loading-wrapper{box-sizing:border-box;position:absolute;top:0;left:0;bottom:0;right:0;display:none;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.is-loading .gitter-chat-embed-loading-wrapper{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex}.gitter-chat-embed-loading-indicator{box-sizing:border-box;opacity:.75;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIGZpbGw9IiMzYTMxMzMiPjxwYXRoIGQ9Ik01MjYgMTM5NHEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41cS01MiAwLTkwLTM4dC0zOC05MHEwLTUzIDM3LjUtOTAuNXQ5MC41LTM3LjUgOTAuNSAzNy41IDM3LjUgOTAuNXptNDk4IDIwNnEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41LTkwLjUtMzcuNS0zNy41LTkwLjUgMzcuNS05MC41IDkwLjUtMzcuNSA5MC41IDM3LjUgMzcuNSA5MC41em0tNzA0LTcwNHEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41LTkwLjUtMzcuNS0zNy41LTkwLjUgMzcuNS05MC41IDkwLjUtMzcuNSA5MC41IDM3LjUgMzcuNSA5MC41em0xMjAyIDQ5OHEwIDUyLTM4IDkwdC05MCAzOHEtNTMgMC05MC41LTM3LjV0LTM3LjUtOTAuNSAzNy41LTkwLjUgOTAuNS0zNy41IDkwLjUgMzcuNSAzNy41IDkwLjV6bS05NjQtOTk2cTAgNjYtNDcgMTEzdC0xMTMgNDctMTEzLTQ3LTQ3LTExMyA0Ny0xMTMgMTEzLTQ3IDExMyA0NyA0NyAxMTN6bTExNzAgNDk4cTAgNTMtMzcuNSA5MC41dC05MC41IDM3LjUtOTAuNS0zNy41LTM3LjUtOTAuNSAzNy41LTkwLjUgOTAuNS0zNy41IDkwLjUgMzcuNSAzNy41IDkwLjV6bS02NDAtNzA0cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNiA1Ni0xMzYgMTM2LTU2IDEzNiA1NiA1NiAxMzZ6bTUzMCAyMDZxMCA5My02NiAxNTguNXQtMTU4IDY1LjVxLTkzIDAtMTU4LjUtNjUuNXQtNjUuNS0xNTguNXEwLTkyIDY1LjUtMTU4dDE1OC41LTY2cTkyIDAgMTU4IDY2dDY2IDE1OHoiLz48L3N2Zz4=);-webkit-animation:spin 2s infinite linear;animation:spin 2s infinite linear}@-webkit-keyframes spin{0%{box-sizing:border-box;-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{box-sizing:border-box;-webkit-transform:rotate(359.9deg);transform:rotate(359.9deg)}}@keyframes spin{0%{box-sizing:border-box;-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{box-sizing:border-box;-webkit-transform:rotate(359.9deg);transform:rotate(359.9deg)}}.gitter-chat-embed-action-bar{position:absolute;top:0;left:0;right:0;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-bottom:.7em;background:linear-gradient(180deg,#fff 0,#fff 50%,hsla(0,0%,100%,0))}.gitter-chat-embed-action-bar,.gitter-chat-embed-action-bar-item{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex}.gitter-chat-embed-action-bar-item{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:40px;height:40px;padding-left:0;padding-right:0;opacity:.65;background:none;background-position:50%;background-repeat:no-repeat;background-size:22px 22px;border:0;outline:none;cursor:pointer;cursor:hand;transition:all .2s ease}.gitter-chat-embed-action-bar-item:focus,.gitter-chat-embed-action-bar-item:hover{box-sizing:border-box;opacity:1}.gitter-chat-embed-action-bar-item:active{box-sizing:border-box;-webkit-filter:hue-rotate(80deg) saturate(150);filter:hue-rotate(80deg) saturate(150)}.gitter-chat-embed-action-bar-item-pop-out{box-sizing:border-box;margin-right:-4px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTcxLjQyOSIgZmlsbD0iIzNhMzEzMyI+PHBhdGggZD0iTTE1Ny4xNDMsMTAzLjU3MXYzNS43MTRjMCw4Ljg1NC0zLjE0NCwxNi40MjYtOS40MzEsMjIuNzEzcy0xMy44NTgsOS40MzEtMjIuNzEyLDkuNDMxSDMyLjE0MyBjLTguODU0LDAtMTYuNDI1LTMuMTQ0LTIyLjcxMi05LjQzMVMwLDE0OC4xNCwwLDEzOS4yODVWNDYuNDI5YzAtOC44NTQsMy4xNDQtMTYuNDI1LDkuNDMxLTIyLjcxMiBjNi4yODctNi4yODcsMTMuODU4LTkuNDMxLDIyLjcxMi05LjQzMWg3OC41NzJjMS4wNDEsMCwxLjg5NiwwLjMzNSwyLjU2NiwxLjAwNGMwLjY3LDAuNjcsMS4wMDQsMS41MjUsMS4wMDQsMi41NjdWMjUgYzAsMS4wNDItMC4zMzQsMS44OTctMS4wMDQsMi41NjdjLTAuNjcsMC42Ny0xLjUyNSwxLjAwNC0yLjU2NiwxLjAwNEgzMi4xNDNjLTQuOTExLDAtOS4xMTUsMS43NDktMTIuNjEyLDUuMjQ2IHMtNS4yNDYsNy43MDEtNS4yNDYsMTIuNjEydjkyLjg1NmMwLDQuOTExLDEuNzQ5LDkuMTE1LDUuMjQ2LDEyLjYxMnM3LjcwMSw1LjI0NSwxMi42MTIsNS4yNDVIMTI1YzQuOTEsMCw5LjExNS0xLjc0OCwxMi42MTEtNS4yNDUgYzMuNDk3LTMuNDk3LDUuMjQ2LTcuNzAxLDUuMjQ2LTEyLjYxMnYtMzUuNzE0YzAtMS4wNDIsMC4zMzQtMS44OTcsMS4wMDQtMi41NjdjMC42Ny0wLjY2OSwxLjUyNS0xLjAwNCwyLjU2Ny0xLjAwNGg3LjE0MyBjMS4wNDIsMCwxLjg5NywwLjMzNSwyLjU2NywxLjAwNEMxNTYuODA5LDEwMS42NzQsMTU3LjE0MywxMDIuNTI5LDE1Ny4xNDMsMTAzLjU3MXogTTIwMCw3LjE0M3Y1Ny4xNDMgYzAsMS45MzUtMC43MDcsMy42MDktMi4xMjEsNS4wMjJjLTEuNDEzLDEuNDE0LTMuMDg4LDIuMTIxLTUuMDIxLDIuMTIxYy0xLjkzNSwwLTMuNjA5LTAuNzA3LTUuMDIyLTIuMTIxbC0xOS42NDQtMTkuNjQzIGwtNzIuNzY3LDcyLjc2OWMtMC43NDQsMC43NDQtMS42LDEuMTE1LTIuNTY3LDEuMTE1cy0xLjgyMy0wLjM3MS0yLjU2Ny0xLjExNUw3Ny41NjcsMTA5LjcxYy0wLjc0NC0wLjc0NC0xLjExNi0xLjYtMS4xMTYtMi41NjcgYzAtMC45NjcsMC4zNzItMS44MjIsMS4xMTYtMi41NjZsNzIuNzY4LTcyLjc2OGwtMTkuNjQ0LTE5LjY0M2MtMS40MTMtMS40MTQtMi4xMi0zLjA4OC0yLjEyLTUuMDIyYzAtMS45MzUsMC43MDctMy42MDksMi4xMi01LjAyMiBDMTMyLjEwNSwwLjcwNywxMzMuNzc5LDAsMTM1LjcxNSwwaDU3LjE0M2MxLjkzNCwwLDMuNjA4LDAuNzA3LDUuMDIxLDIuMTIxQzE5OS4yOTMsMy41MzQsMjAwLDUuMjA4LDIwMCw3LjE0M3oiLz48L3N2Zz4=)}.gitter-chat-embed-action-bar-item-collapse-chat{box-sizing:border-box;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzEuNDI5IDE3MS40MjkiIGZpbGw9IiMzYTMxMzMiPjxwYXRoIGQ9Ik0xMjIuNDMzLDEwNi4xMzhsLTE2LjI5NSwxNi4yOTVjLTAuNzQ0LDAuNzQ0LTEuNiwxLjExNi0yLjU2NiwxLjExNmMtMC45NjgsMC0xLjgyMy0wLjM3Mi0yLjU2Ny0xLjExNmwtMTUuMjktMTUuMjkgbC0xNS4yOSwxNS4yOWMtMC43NDQsMC43NDQtMS42LDEuMTE2LTIuNTY3LDEuMTE2cy0xLjgyMy0wLjM3Mi0yLjU2Ny0xLjExNmwtMTYuMjk0LTE2LjI5NWMtMC43NDQtMC43NDQtMS4xMTYtMS42LTEuMTE2LTIuNTY2IGMwLTAuOTY4LDAuMzcyLTEuODIzLDEuMTE2LTIuNTY3bDE1LjI5LTE1LjI5bC0xNS4yOS0xNS4yOWMtMC43NDQtMC43NDQtMS4xMTYtMS42LTEuMTE2LTIuNTY3czAuMzcyLTEuODIzLDEuMTE2LTIuNTY3IEw2NS4yOSw0OC45OTZjMC43NDQtMC43NDQsMS42LTEuMTE2LDIuNTY3LTEuMTE2czEuODIzLDAuMzcyLDIuNTY3LDEuMTE2bDE1LjI5LDE1LjI5bDE1LjI5LTE1LjI5IGMwLjc0NC0wLjc0NCwxLjYtMS4xMTYsMi41NjctMS4xMTZjMC45NjcsMCwxLjgyMiwwLjM3MiwyLjU2NiwxLjExNmwxNi4yOTUsMTYuMjk0YzAuNzQ0LDAuNzQ0LDEuMTE2LDEuNiwxLjExNiwyLjU2NyBzLTAuMzcyLDEuODIzLTEuMTE2LDIuNTY3bC0xNS4yOSwxNS4yOWwxNS4yOSwxNS4yOWMwLjc0NCwwLjc0NCwxLjExNiwxLjYsMS4xMTYsMi41NjcgQzEyMy41NDksMTA0LjUzOSwxMjMuMTc3LDEwNS4zOTQsMTIyLjQzMywxMDYuMTM4eiBNMTQ2LjQyOSw4NS43MTRjMC0xMS4wMTItMi43MTctMjEuMTY4LTguMTQ4LTMwLjQ2OSBzLTEyLjc5Ny0xNi42NjctMjIuMDk4LTIyLjA5OFM5Ni43MjYsMjUsODUuNzE0LDI1cy0yMS4xNjgsMi43MTYtMzAuNDY5LDguMTQ3UzM4LjU3OSw0NS45NDUsMzMuMTQ3LDU1LjI0NlMyNSw3NC43MDMsMjUsODUuNzE0IHMyLjcxNiwyMS4xNjgsOC4xNDcsMzAuNDY5czEyLjc5NywxNi42NjYsMjIuMDk4LDIyLjA5OHMxOS40NTcsOC4xNDgsMzAuNDY5LDguMTQ4czIxLjE2OC0yLjcxNywzMC40NjktOC4xNDggczE2LjY2Ni0xMi43OTcsMjIuMDk4LTIyLjA5OFMxNDYuNDI5LDk2LjcyNiwxNDYuNDI5LDg1LjcxNHogTTE3MS40MjksODUuNzE0YzAsMTUuNTUxLTMuODMyLDI5Ljg5My0xMS40OTYsNDMuMDI0IGMtNy42NjQsMTMuMTMzLTE4LjA2MiwyMy41My0zMS4xOTQsMzEuMTk0Yy0xMy4xMzIsNy42NjQtMjcuNDc0LDExLjQ5Ni00My4wMjQsMTEuNDk2cy0yOS44OTItMy44MzItNDMuMDI0LTExLjQ5NiBjLTEzLjEzMy03LjY2NC0yMy41MzEtMTguMDYyLTMxLjE5NC0zMS4xOTRDMy44MzIsMTE1LjYwNywwLDEwMS4yNjUsMCw4NS43MTRTMy44MzIsNTUuODIyLDExLjQ5Niw0Mi42OSBjNy42NjQtMTMuMTMzLDE4LjA2Mi0yMy41MzEsMzEuMTk0LTMxLjE5NEM1NS44MjIsMy44MzIsNzAuMTY0LDAsODUuNzE0LDBzMjkuODkzLDMuODMyLDQzLjAyNCwxMS40OTYgYzEzLjEzMyw3LjY2NCwyMy41MywxOC4wNjIsMzEuMTk0LDMxLjE5NEMxNjcuNTk3LDU1LjgyMiwxNzEuNDI5LDcwLjE2NCwxNzEuNDI5LDg1LjcxNHoiLz48L3N2Zz4=)}.gitter-open-chat-button{z-index:100;position:fixed;bottom:0;right:10px;padding:1em 3em;background-color:#36bc98;border:0;border-top-left-radius:.5em;border-top-right-radius:.5em;font-family:sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-align:center;text-decoration:none;cursor:pointer;cursor:hand;transition:all .3s ease}.gitter-open-chat-button,.gitter-open-chat-button:visited{box-sizing:border-box;color:#fff}.gitter-open-chat-button:focus,.gitter-open-chat-button:hover{box-sizing:border-box;background-color:#3ea07f;color:#fff}.gitter-open-chat-button:focus{box-sizing:border-box;box-shadow:0 0 8px rgba(62,160,127,.6);outline:none}.gitter-open-chat-button:active{box-sizing:border-box;color:#eee}.gitter-open-chat-button.is-collapsed{box-sizing:border-box;-webkit-transform:translateY(120%);transform:translateY(120%)}</style><link href="https://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Open-Source Deep-Learning Software for Java and Scala on Hadoop and Spark">
+<meta name="author" content="Chris V. Nicholson, Adam Gibson, Skymind team">
+<title>
+    
+      A Beginner's Guide to Recurrent Networks and LSTMs - Deeplearning4j: Open-source, Distributed Deep Learning for the JVM
+    
+  </title>
+
+<link href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/theDocs.css" rel="stylesheet">
+<link href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/skin-dark.css" rel="stylesheet">
+
+<link rel="stylesheet" href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/animate.css">
+
+<link href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/dl4j.css" rel="stylesheet">
+
+<link href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/css.css" rel="stylesheet" type="text/css">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://deeplearning4j.org/assets/themes/thedocs/img/apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" href="https://deeplearning4j.org/assets/themes/thedocs/img/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://deeplearning4j.org/atom.xml">
+
+<script type="text/javascript" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/pd.js"></script><script type="text/javascript" async="" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/linkid.js"></script><script type="text/javascript" async="" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/geH.js"></script><script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/5605.js" async="" type="text/javascript"></script><script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/2179705.js" type="text/javascript" id="hs-analytics"></script><script async="" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/analytics.js"></script><script async="" defer="defer" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/buttons.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48811288-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+  ga('require', 'displayfeatures');
+  </script>
+
+
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0025/5605.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+
+
+<script type="text/javascript" id="hs-script-loader" async="" defer="defer" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/2179705_002.js"></script>
+
+
+<script type="text/javascript">
+  piAId = '457082';
+  piCId = '66281';
+  piHostname = 'pi.pardot.com';
+
+  (function() {
+  	function async_load(){
+  		var s = document.createElement('script'); s.type = 'text/javascript';
+  		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+  		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  	}
+  	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  	else { window.addEventListener('load', async_load, false); }
+  })();
+  </script>
+
+
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/2296590312.js"></script>
+
+
+
+<script type="text/javascript" async="" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/embed-controller.js" charset="utf-8"></script><style type="text/css">.imgur-embed-iframe-pub { box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10); border: 1px solid #ddd; border-radius: 2px;}</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css" id="ki-m1i-moe"></style><style type="text/css" id="ki-m1i-mc4"></style><style type="text/css">#imgur-embed-iframe-pub-kpZBDfV { height: 534px !important;width:540px !important;}</style><script type="text/javascript" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/analytics"></script></head>
+<body><style>@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');</style>
+
+<script type="text/javascript">
+    var _kiq = _kiq || [];
+    (function(){
+      setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+      s.async = true; s.src = '//s3.amazonaws.com/ki.js/68133/geH.js'; f.parentNode.insertBefore(s, f);
+      }, 1);
+    })();
+  </script>
+<style>
+  /* Fix subscribe form formatting */
+  li.subscribe-form {
+    padding: 2px 20px !important;
+  }
+
+  .hs-richtext {
+    margin-bottom: -30px;
+  }
+
+  .hs-button {
+    background-color: #2196f3;
+    border-color: #2196f3;
+    color: #fff;
+    margin-top: 10px;
+  }
+
+</style>
+
+<header class="site-header navbar-fullwidth">
+
+<nav class="navbar navbar-default">
+<div class="container">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+<span class="glyphicon glyphicon-option-vertical"></span>
+</button>
+<button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://deeplearning4j.org/index.html"><span class="force-middle"></span><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/DL4J.png" alt="Deeplearning4j"></a>
+</div>
+
+
+<div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+<ul class="nav navbar-nav navbar-right">
+<li class="hero"><a href="https://deeplearning4j.org/quickstart">Quickstart</a></li>
+<li><a href="https://deeplearning4j.org/documentation">Documentation</a></li>
+<li><a href="https://deeplearning4j.org/gpu">GPUs</a></li>
+<li><a href="https://deeplearning4j.org/spark">Spark</a></li>
+<li><a href="https://deeplearning4j.org/lstm">LSTM</a></li>
+<li><a href="https://deeplearning4j.org/about">About</a></li>
+<li><a href="http://newsletter.deeplearning4j.org/l/456082/2017-12-06/dxd853" target="_blank">Newsletter</a></li>
+</ul>
+</div>
+<div class="github-ribbon">
+<a href="https://github.com/deeplearning4j/deeplearning4j"><img style="position: absolute; top: 0; right: 0; border: 0;" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+</div>
+
+</div>
+</nav>
+
+</header>
+
+
+<aside class="sidebar sidebar-boxed sidebar-dark">
+<a class="sidebar-brand" href="https://deeplearning4j.org/index.html"><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/DL4J.png" alt="Deeplearning4j"></a>
+<ul class="sidenav dropable sticky" style="height: 433px; position: static;">
+<li><a href="https://www.amazon.com/Deep-Learning-Practitioners-Adam-Gibson/dp/1491914254" target="_blank">Deep Learning Textbook</a></li>
+<li><a href="https://skymind.ai/platform?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387" target="_blank">Download SKIL Community Edition</a></li>
+<li>
+<a href="#" class="has-child">Getting Started</a>
+<ul>
+<li><a href="https://deeplearning4j.org/overview">DeepLearning4J Overview</a></li>
+<li><a href="https://deeplearning4j.org/quickstart">Quickstart: Running DL4J</a></li>
+<li><a href="https://deeplearning4j.org/core-concepts">DeepLearning4J: Core Concepts</a></li>
+<li><a href="https://deeplearning4j.org/gettingstarted">Comprehensive Setup Guide</a></li>
+<li><a href="https://deeplearning4j.org/quickref">Quick Reference: Layers &amp; Functionality</a><a></a></li><a>
+</a><li><a></a><a href="https://deeplearning4j.org/buildinglocally">Build Locally From Master</a></li>
+<li><a href="https://deeplearning4j.org/maven">Use the Maven Build Tool</a></li>
+<li><a href="https://deeplearning4j.org/buildtools">Or Configure DL4J in Ivy, Gradle, SBT etc.</a></li>
+<li><a href="http://nd4j.org/gpu_native_backends.html?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">Swap CPUs for GPUs</a></li>
+<li><a href="https://deeplearning4j.org/benchmark">DeepLearning4J Benchmarks</a></li>
+<li><a href="https://docs.skymind.ai/v1.0.3/reference?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">Machine learning server API docs</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Tutorials</a>
+<ul>
+<li><a href="https://deeplearning4j.org/tutorials">Deep Learning Tutorial Index</a></li>
+<li><a href="https://deeplearning4j.org/mnist-for-beginners">MNIST for Beginners</a></li>
+<li><a href="https://deeplearning4j.org/usingrnns">Using Recurrent Nets in DL4J</a></li>
+<li><a href="http://nd4j.org/userguide?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">Use ND4J for Scientific Computing</a></li>
+<li><a href="https://deeplearning4j.org/datavec">DataVec: Vectorization and Preprocessing for Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/updater">Neural Net Updaters: SGD, Adam, Adagrad, Adadelta, RMSProp</a></li>
+<li><a href="https://deeplearning4j.org/welldressed-recommendation-engine">Build a Recommendation Engine With DL4J</a></li>
+<li><a href="https://deeplearning4j.org/build_vgg_webapp">Build a Web Application for Image Classification</a></li>
+<li><a href="https://deeplearning4j.org/android">Deploy Deeplearning4j to Android</a></li>
+<li><a href="https://deeplearning4j.org/artificial-intelligence-ai.html">What is Artificial Intelligence (AI)?</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Introduction to Deep Learning</a>
+<ul>
+<li><a href="https://deeplearning4j.org/neuralnet-overview">Introduction to Neural Networks</a></li>
+<li><a href="https://deeplearning4j.org/questions">Questions to Ask When Applying DL</a></li>
+<li><a href="https://deeplearning4j.org/deeplearningforbeginners.html">Deep Learning for Beginners</a></li>
+<li><a href="https://deeplearning4j.org/use_cases">Deep Learning Use Cases</a></li>
+<li><a href="https://deeplearning4j.org/accuracy">Deep Learning's Accuracy</a></li>
+<li><a href="https://deeplearning4j.org/ai-machinelearning-deeplearning">AI, Machine Learning and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/data-for-deep-learning.html">The Data You Need For Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/multinetwork">Multilayer Neural Nets</a></li>
+<li><a href="https://deeplearning4j.org/neuralnetworktable">Choosing a Neural Network</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Neural Networks</a>
+<ul>
+<li><a href="https://deeplearning4j.org/lstm">Long Short-Term Memory Units</a></li>
+<li><a href="https://deeplearning4j.org/convolutionalnetwork">Convolutional Nets for Image Processing</a></li>
+<li><a href="https://deeplearning4j.org/recurrentnetwork">Recurrent Nets and LSTMs</a></li>
+<li><a href="https://deeplearning4j.org/word2vec">Word2Vec: Neural Word Embeddings</a></li>
+<li><a href="https://deeplearning4j.org/restrictedboltzmannmachine">Restricted Boltzmann Machines</a></li>
+<li><a href="https://deeplearning4j.org/multilayerperceptron">Multilayer Perceptron</a></li>
+<li><a href="https://deeplearning4j.org/deepautoencoder">Deep AutoEncoder</a></li>
+<li><a href="https://deeplearning4j.org/denoisingautoencoder">Denoising Autoencoders</a></li>
+<li><a href="https://deeplearning4j.org/stackeddenoisingautoencoder">Stacked Denoising Autoencoders</a></li>
+<li><a href="https://deeplearning4j.org/building-neural-net-with-dl4j">Building a Neural Net with DeepLearning4J</a></li>
+<li><a href="https://deeplearning4j.org/evaluation">Evaluating Neural Nets</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Data &amp; ETL</a>
+<ul>
+<li><a href="https://deeplearning4j.org/etl-userguide">ETL User Guide</a></li>
+<li><a href="https://deeplearning4j.org/datavec">DataVec: ETL for Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/workspaces">Workspaces</a></li>
+<li><a href="https://deeplearning4j.org/image-data-pipeline.html#record">Build a Data Pipeline</a></li>
+<li><a href="https://deeplearning4j.org/simple-image-load-transform">Customize an Image Pipeline</a></li>
+<li><a href="https://deeplearning4j.org/datavecdoc/">DataVec Javadoc: DataVec Methods &amp; Classes for ETL</a></li>
+<li><a href="https://deeplearning4j.org/data-sets-ml">Datasets and Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/customdatasets">Custom Datasets</a></li>
+<li><a href="https://deeplearning4j.org/csv-deep-learning">CSV Data Uploads</a></li>
+<li><a href="https://deeplearning4j.org/opendata">Open Data for Machine Learning</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Tuning &amp; Training</a>
+<ul>
+<li><a href="https://deeplearning4j.org/memory">Memory management options</a></li>
+<li><a href="https://deeplearning4j.org/spark">Training Neural Networks with Apache Spark</a></li>
+<li><a href="https://deeplearning4j.org/distributed">Apache Spark &amp; DL4J Parameter Server</a></li>
+<li><a href="https://deeplearning4j.org/iterativereduce">Distributed Training: Iterative Reduce Defined</a></li>
+<li><a href="https://deeplearning4j.org/visualization">Visualize, Monitor and Debug Network Learning</a></li>
+<li><a href="https://deeplearning4j.org/troubleshootingneuralnets">Troubleshoot Training &amp; Select Network Hyperparameters</a></li>
+<li><a href="https://deeplearning4j.org/earlystopping">Train Networks using Early Stopping</a></li>
+<li><a href="https://deeplearning4j.org/output">Interpret Neural Net Output</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Advanced Usage</a>
+<ul>
+<li><a href="https://deeplearning4j.org/spark-gpus">Running Deep Learning on Distributed GPUs With Spark</a></li>
+<li><a href="https://deeplearning4j.org/model-zoo">Model Zoo: Pre-trained Models</a></li>
+<li><a href="https://deeplearning4j.org/modelpersistence">Save and Load Models</a></li>
+<li><a href="https://deeplearning4j.org/tsne-visualization">Visualize Data with t-SNE</a></li>
+<li><a href="https://deeplearning4j.org/logistic-regression">Perform Regression With Neural Nets</a></li>
+<li><a href="https://deeplearning4j.org/usingrnns">Use Recurrent Networks in DL4J</a></li>
+<li><a href="https://deeplearning4j.org/compgraph">Build Complex Network Architectures with Computation Graph</a></li>
+<li><a href="https://deeplearning4j.org/devops-machine-learning">DevOps for Machine Learning</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Open-Source Community</a>
+<ul>
+<li><a href="https://deeplearning4j.org/devguide">Contribute to DL4J (Developer Guide)</a></li>
+
+<li><a href="https://deeplearning4j.org/features">Features</a></li>
+<li><a href="https://deeplearning4j.org/roadmap">Roadmap</a></li>
+<li><a href="https://deeplearning4j.org/releasenotes">Latest Release Notes</a></li>
+<li><a href="https://deeplearning4j.org/doc">Javadoc: DL4J Methods and Classes</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Natural Language Processing</a>
+<ul>
+<li><a href="https://deeplearning4j.org/nlp">DL4J's NLP Functionality</a></li>
+<li><a href="https://deeplearning4j.org/word2vec">Word2vec for Java and Scala</a></li>
+<li><a href="https://deeplearning4j.org/doc2vec">Doc2vec for Java and Scala</a></li>
+<li><a href="https://deeplearning4j.org/textanalysis">Textual Analysis and DL</a></li>
+<li><a href="https://deeplearning4j.org/bagofwords-tf-idf">Bag of Words</a></li>
+<li><a href="https://deeplearning4j.org/sentenceiterator">Sentence and Document Segmentation</a></li>
+<li><a href="https://deeplearning4j.org/tokenization">Tokenization</a></li>
+<li><a href="https://deeplearning4j.org/vocabcache">Vocab Cache</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">ND4J: Numpy for the JVM</a>
+<ul>
+<li><a href="http://nd4j.org/backend.html?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">ND4J Backends: Hardware Acceleration on CPUs and GPUs</a></li>
+<li><a href="http://nd4j.org/userguide?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">ND4J User Guide</a></li>
+<li><a href="http://nd4j.org/doc/?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">ND4J Javadoc</a></li>
+<li><a href="https://deeplearning4j.org/jumpy">Jumpy: Numpy Arrays for the JVM</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">More Resources</a>
+<ul>
+<li><a href="https://deeplearning4j.org/eigenvector">Eigenvectors, PCA, Covariance and Entropy</a></li>
+<li><a href="https://deeplearning4j.org/thoughtvectors">Thought Vectors, AI and NLP</a></li>
+<li><a href="https://deeplearning4j.org/markovchainmontecarlo">Monte Carlo, Markov Chains and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/unsupervised-learning">Unsupervised Learning: Use Cases</a></li>
+<li><a href="https://deeplearning4j.org/deepreinforcementlearning">DL and Reinforcement Learning</a></li>
+<li><a href="https://deeplearning4j.org/symbolicreasoning">Symbolic AI and Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/graphanalytics">Graph Analytics and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/decision-tree">Decision Trees</a></li>
+<li><a href="https://deeplearning4j.org/random-forest">Random Forests</a></li>
+<li><a href="https://deeplearning4j.org/scala">Scala, Spark and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/compare-dl4j-tensorflow-pytorch">DL4J, TensorFlow, Pytorch, Caffe</a></li>
+<li><a href="https://deeplearning4j.org/glossary">Glossary of Terms for Deep Learning and Neural Nets</a></li>
+<li><a href="https://deeplearning4j.org/deeplearningpapers">Free Online Courses, Tutorials and Papers</a></li>
+<li><a href="https://deeplearning4j.org/deeplearningtranslated">Deep Learning in Other Languages</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Other Languages</a>
+<ul>
+<li><a href="https://deeplearning4j.org/cn/index">中文</a></li>
+<li><a href="https://deeplearning4j.org/ja-index">日本語</a></li>
+<li><a href="https://deeplearning4j.org/kr-index">한글</a></li>
+</ul>
+</li>
+</ul>
+</aside>
+
+<main class="container-fluid">
+<div class="row">
+
+<article class="main-content" role="main">
+
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/2296590312.js"></script>
+
+<h1 id="a-beginners-guide-to-recurrent-networks-and-lstms"><a href="#a-beginners-guide-to-recurrent-networks-and-lstms">A Beginner’s Guide to Recurrent Networks and LSTMs</a></h1>
+<p>Contents</p>
+<ul>
+<li><a href="#feedforward">Feedforward Networks</a></li>
+<li><a href="#recurrent">Recurrent Networks</a></li>
+<li><a href="#backpropagation">Backpropagation Through Time</a></li>
+<li><a href="#vanishing">Vanishing and Exploding Gradients</a></li>
+<li><a href="#long">Long Short-Term Memory Units (LSTMs)</a></li>
+<li><a href="#capturing">Capturing Diverse Time Scales</a></li>
+<li><a href="#code">Code Sample &amp; Comments</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<p>The purpose of this post is to give students of neural networks an 
+intuition about the functioning of recurrent neural networks and purpose
+ and structure of a prominent RNN variation, LSTMs.</p>
+<p>Recurrent nets are a type of artificial neural network designed to 
+recognize patterns in sequences of data, such as text, genomes, 
+handwriting, the spoken word, or numerical times series data emanating 
+from sensors, stock markets and government agencies.</p>
+<p>They are arguably the most powerful and useful type of neural 
+network, applicable even to images, which can be decomposed into a 
+series of patches and treated as a sequence.</p>
+<p>Since recurrent networks possess a certain type of memory, and memory
+ is also part of the human condition, we’ll make repeated analogies to 
+memory in the brain.<sup><a href="#one">1</a></sup></p>
+<p align="center">
+<a href="https://docs.skymind.ai/docs/welcome?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387" type="button" class="btn btn-lg btn-success" onclick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH LSTMs</a>
+</p>
+<h2 id="review-of-feedforward-networks"><a href="#review-of-feedforward-networks"></a><a name="feedforward">Review of Feedforward Networks</a></h2>
+<p>To understand recurrent nets, first you have to understand the basics of <a href="https://deeplearning4j.org/restrictedboltzmannmachine.html">feedforward nets</a>.
+ Both of these networks are named after the way they channel information
+ through a series of mathematical operations performed at the nodes of 
+the network. One feeds information straight through (never touching a 
+given node twice), while the other cycles it through a loop, and the 
+latter are called recurrent.</p>
+<p>In the case of feedforward networks, input examples are fed to the 
+network and transformed into an output; with supervised learning, the 
+output would be a label, a name applied to the input. That is, they map 
+raw data to categories, recognizing patterns that may signal, for 
+example, that an input image should be labeled “cat” or “elephant.”</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/feedforward_rumelhart.png" alt="Alt text"></p>
+<p>A feedforward network is trained on labeled images until it minimizes
+ the error it makes when guessing their categories. With the trained set
+ of parameters (or weights, collectively known as a model), the network 
+sallies forth to categorize data it has never seen. A trained 
+feedforward network can be exposed to any random collection of 
+photographs, and the first photograph it is exposed to will not 
+necessarily alter how it classifies the second. Seeing photograph of a 
+cat will not lead the net to perceive an elephant next.</p>
+<p>That is, a feedforward network has no notion of order in time, and 
+the only input it considers is the current example it has been exposed 
+to. Feedforward networks are amnesiacs regarding their recent past; they
+ remember nostalgically only the formative moments of training.</p>
+<h2 id="recurrent-networks"><a href="#recurrent-networks"></a><a name="recurrent">Recurrent Networks</a></h2>
+<p>Recurrent networks, on the other hand, take as their input not just 
+the current input example they see, but also what they have perceived 
+previously in time. Here’s a diagram of an early, <a href="https://web.stanford.edu/group/pdplab/pdphandbook/handbookch8.html">simple recurrent net proposed by Elman</a>, where the <em>BTSXPE</em> at the bottom of the drawing represents the input example in the current moment, and <em>CONTEXT UNIT</em> represents the output of the previous moment.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/srn_elman.png" alt="Alt text"></p>
+<p>The decision a recurrent net reached at time step <code class="highlighter-rouge">t-1</code> affects the decision it will reach one moment later at time step <code class="highlighter-rouge">t</code>.
+ So recurrent networks have two sources of input, the present and the 
+recent past, which combine to determine how they respond to new data, 
+much as we do in life.</p>
+<p>Recurrent networks are distinguished from feedforward networks by 
+that feedback loop connected to their past decisions, ingesting their 
+own outputs moment after moment as input. It is often said that 
+recurrent networks have memory.<sup><a href="#two">2</a></sup> Adding 
+memory to neural networks has a purpose: There is information in the 
+sequence itself, and recurrent nets use it to perform tasks that 
+feedforward networks can’t.</p>
+<p>That sequential information is preserved in the recurrent network’s 
+hidden state, which manages to span many time steps as it cascades 
+forward to affect the processing of each new example. It is finding 
+correlations between events separated by many moments, and these 
+correlations are called “long-term dependencies”, because an event 
+downstream in time depends upon, and is a function of, one or more 
+events that came before. One way to think about RNNs is this: they are a
+ way to share weights over time.</p>
+<p>Just as human memory circulates invisibly within a body, affecting 
+our behavior without revealing its full shape, information circulates in
+ the hidden states of recurrent nets. The English language is full of 
+words that describe the feedback loops of memory. When we say a person 
+is haunted by their deeds, for example, we are simply talking about the 
+consequences that past outputs wreak on present time. The French call 
+this “<em>Le passé qui ne passe pas</em>,” or “The past that does not pass away.”</p>
+<p>We’ll describe the process of carrying memory forward mathematically:</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/recurrent_equation.png" alt="Alt text"></p>
+<p>The hidden state at time step t is <code class="highlighter-rouge">h_t</code>. It is a function of the input at the same time step <code class="highlighter-rouge">x_t</code>, modified by a weight matrix <code class="highlighter-rouge">W</code> (like the one we used for feedforward nets) added to the hidden state of the previous time step <code class="highlighter-rouge">h_t-1</code> multiplied by its own hidden-state-to-hidden-state matrix <code class="highlighter-rouge">U</code>,
+ otherwise known as a transition matrix and similar to a Markov chain. 
+The weight matrices are filters that determine how much importance to 
+accord to both the present input and the past hidden state. The error 
+they generate will return via backpropagation and be used to adjust 
+their weights until error can’t go any lower.</p>
+<p>The sum of the weight input and hidden state is squashed by the function <code class="highlighter-rouge">φ</code>
+ – either a logistic sigmoid function or tanh, depending – which is a 
+standard tool for condensing very large or very small values into a 
+logistic space, as well as making <a href="https://deeplearning4j.org/glossary.html#gradient">gradients</a> workable for backpropagation.</p>
+<p>Because this feedback loop occurs at every time step in the series, 
+each hidden state contains traces not only of the previous hidden state,
+ but also of all those that preceded <code class="highlighter-rouge">h_t-1</code> for as long as memory can persist.</p>
+<p>Given a series of letters, a recurrent <em>will</em> use the first character to help determine its perception of the second character, such that an initial <code class="highlighter-rouge">q</code> might lead it to infer that the next letter will be <code class="highlighter-rouge">u</code>, while an initial <code class="highlighter-rouge">t</code> might lead it to infer that the next letter will be <code class="highlighter-rouge">h</code>.</p>
+<p>Since recurrent nets span time, they are probably best illustrated 
+with animation (the first vertical line of nodes to appear can be 
+thought of as a feedforward network, which becomes recurrent as it 
+unfurls over time).</p>
+<iframe allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="height: 500px; width: 540px; margin: 10px 0px; padding: 0px;" class="imgur-embed-iframe-pub imgur-embed-iframe-pub-kpZBDfV-true-540" scrolling="no" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/embed.html" id="imgur-embed-iframe-pub-kpZBDfV"></iframe><script async="" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/embed.js" charset="utf-8"></script>
+<p>In the <a href="https://imgur.com/kpZBDfV">diagram above</a>, each <code class="highlighter-rouge">x</code> is an input example, <code class="highlighter-rouge">w</code> is the weights that filter inputs, <code class="highlighter-rouge">a</code> is the activation of the hidden layer (a combination of weighted input and the previous hidden state), and <code class="highlighter-rouge">b</code> is the output of the hidden layer after it has been transformed, or squashed, using a rectified linear or sigmoid unit.</p>
+<h2 id="backpropagation-through-time-bptt"><a href="#backpropagation-through-time-bptt"></a><a name="backpropagation">Backpropagation Through Time (BPTT)</a></h2>
+<p>Remember, the purpose of recurrent nets is to accurately classify 
+sequential input. We rely on the backpropagation of error and gradient 
+descent to do so.</p>
+<p>Backpropagation in feedforward networks moves backward from the final
+ error through the outputs, weights and inputs of each hidden layer, 
+assigning those weights responsibility for a portion of the error by 
+calculating their partial derivatives – <em>∂E/∂w</em>, or the 
+relationship between their rates of change. Those derivatives are then 
+used by our learning rule, gradient descent, to adjust the weights up or
+ down, whichever direction decreases error.</p>
+<p>Recurrent networks rely on an extension of backpropagation called <a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2015/pdfs/Werbos.backprop.pdf">backpropagation through time</a>,
+ or BPTT. Time, in this case, is simply expressed by a well-defined, 
+ordered series of calculations linking one time step to the next, which 
+is all backpropagation needs to work.</p>
+<p>Neural networks, whether they are recurrent or not, are simply nested composite functions like <code class="highlighter-rouge">f(g(h(x)))</code>. Adding a time element only extends the series of functions for which we calculate derivatives with the chain rule.</p>
+<h3 id="truncated-bptt"><a href="#truncated-bptt">Truncated BPTT</a></h3>
+<p><a href="https://www.cs.utoronto.ca/~ilya/pubs/ilya_sutskever_phd_thesis.pdf">Truncated BPTT</a>
+ is an approximation of full BPTT that is preferred for long sequences, 
+since full BPTT’s forward/backward cost per parameter update becomes 
+very high over many time steps. The downside is that the gradient can 
+only flow back so far due to that truncation, so the network can’t learn
+ dependencies that are as long as in full BPTT.</p>
+<h2 id="vanishing-and-exploding-gradients"><a href="#vanishing-and-exploding-gradients"></a><a name="vanishing">Vanishing (and Exploding) Gradients</a></h2>
+<p>Like most neural networks, recurrent nets are old. By the early 1990s, the <em>vanishing gradient problem</em> emerged as a major obstacle to recurrent net performance.</p>
+<p>Just as a straight line expresses a change in x alongside a change in y, the <em>gradient</em>
+ expresses the change in all weights with regard to the change in error.
+ If we can’t know the gradient, we can’t adjust the weights in a 
+direction that will decrease error, and our network ceases to learn.</p>
+<p>Recurrent nets seeking to establish connections between a final 
+output and events many time steps before were hobbled, because it is 
+very difficult to know how much importance to accord to remote inputs. 
+(Like great-great-*-grandparents, they multiply quickly in number and 
+their legacy is often obscure.)</p>
+<p>This is partially because the information flowing through neural nets passes through many stages of multiplication.</p>
+<p>Everyone who has studied compound interest knows that any quantity 
+multiplied frequently by an amount slightly greater than one can become 
+immeasurably large (indeed, that simple mathematical truth underpins 
+network effects and inevitable social inequalities). But its inverse, 
+multiplying by a quantity less than one, is also true. Gamblers go 
+bankrupt fast when they win just 97 cents on every dollar they put in 
+the slots.</p>
+<p>Because the layers and time steps of deep neural networks relate to 
+each other through multiplication, derivatives are susceptible to 
+vanishing or exploding.</p>
+<p>Exploding gradients treat every weight as though it were the 
+proverbial butterfly whose flapping wings cause a distant hurricane. 
+Those weights’ gradients become saturated on the high end; i.e. they are
+ presumed to be too powerful. But exploding gradients can be solved 
+relatively easily, because they can be truncated or squashed. Vanishing 
+gradients can become too small for computers to work with or for 
+networks to learn – a harder problem to solve.</p>
+<p>Below you see the effects of applying a sigmoid function over and 
+over again. The data is flattened until, for large stretches, it has no 
+detectable slope. This is analogous to a gradient vanishing as it passes
+ through many layers.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/sigmoid_vanishing_gradient.png" alt="Alt text"></p>
+<h2 id="long-short-term-memory-units-lstms"><a href="#long-short-term-memory-units-lstms"></a><a name="long">Long Short-Term Memory Units (LSTMs)</a></h2>
+<p>In the mid-90s, a variation of recurrent net with so-called Long 
+Short-Term Memory units, or LSTMs, was proposed by the German 
+researchers Sepp Hochreiter and Juergen Schmidhuber as a solution to the
+ vanishing gradient problem.</p>
+<p>LSTMs help preserve the error that can be backpropagated through time
+ and layers. By maintaining a more constant error, they allow recurrent 
+nets to continue to learn over many time steps (over 1000), thereby 
+opening a channel to link causes and effects remotely. This is one of 
+the central challenges to machine learning and AI, since algorithms are 
+frequently confronted by environments where reward signals are sparse 
+and delayed, such as life itself. (Religious thinkers have tackled this 
+same problem with ideas of karma or divine reward, theorizing invisible 
+and distant consequences to our actions.)</p>
+<p>LSTMs contain information outside the normal flow of the recurrent 
+network in a gated cell. Information can be stored in, written to, or 
+read from a cell, much like data in a computer’s memory. The cell makes 
+decisions about what to store, and when to allow reads, writes and 
+erasures, via gates that open and close. Unlike the digital storage on 
+computers, however, these gates are analog, implemented with 
+element-wise multiplication by sigmoids, which are all in the range of 
+0-1. Analog has the advantage over digital of being differentiable, and 
+therefore suitable for backpropagation.</p>
+<p>Those gates act on the signals they receive, and similar to the 
+neural network’s nodes, they block or pass on information based on its 
+strength and import, which they filter with their own sets of weights. 
+Those weights, like the weights that modulate input and hidden states, 
+are adjusted via the recurrent networks learning process. That is, the 
+cells learn when to allow data to enter, leave or be deleted through the
+ iterative process of making guesses, backpropagating error, and 
+adjusting weights via gradient descent.</p>
+<p>The diagram below illustrates how data flows through a memory cell and is controlled by its gates.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/gers_lstm.png" alt="Alt text"></p>
+<p>There are a lot of moving parts here, so if you are new to LSTMs, 
+don’t rush this diagram – contemplate it. After a few minutes, it will 
+begin to reveal its secrets.</p>
+<p>Starting from the bottom, the triple arrows show where information 
+flows into the cell at multiple points. That combination of present 
+input and past cell state is fed not only to the cell itself, but also 
+to each of its three gates, which will decide how the input will be 
+handled.</p>
+<p>The black dots are the gates themselves, which determine respectively
+ whether to let new input in, erase the present cell state, and/or let 
+that state impact the network’s output at the present time step. <code class="highlighter-rouge">S_c</code> is the current state of the memory cell, and <code class="highlighter-rouge">g_y_in</code>
+ is the current input to it. Remember that each gate can be open or 
+shut, and they will recombine their open and shut states at each step. 
+The cell can forget its state, or not; be written to, or not; and be 
+read from, or not, at each time step, and those flows are represented 
+here.</p>
+<p>The large bold letters give us the result of each operation.</p>
+<p>Here’s another diagram for good measure, comparing a simple recurrent
+ network (left) to an LSTM cell (right). The blue lines can be ignored; 
+the legend is helpful.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/greff_lstm_diagram.png" alt="Alt text"></p>
+<p>It’s important to note that LSTMs’ memory cells give different roles 
+to addition and multiplication in the transformation of input. The 
+central <strong>plus sign</strong> in both diagrams is essentially the 
+secret of LSTMs. Stupidly simple as it may seem, this basic change helps
+ them preserve a constant error when it must be backpropagated at depth.
+ Instead of determining the subsequent cell state by multiplying its 
+current state with new input, they add the two, and that quite literally
+ makes the difference. (The forget gate still relies on multiplication, 
+of course.)</p>
+<p>Different sets of weights filter the input for input, output and 
+forgetting. The forget gate is represented as a linear identity 
+function, because if the gate is open, the current state of the memory 
+cell is simply multiplied by one, to propagate forward one more time 
+step.</p>
+<p>Furthermore, while we’re on the topic of simple hacks, <a href="http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf">including a bias of 1</a> to the forget gate of every LSTM cell is also shown to <a href="http://www.felixgers.de/papers/phd.pdf">improve performance</a>. (<em>Sutskever, on the other hand, recommends a bias of 5.</em>)</p>
+<p>You may wonder why LSTMs have a forget gate when their purpose is to 
+link distant occurrences to a final output. Well, sometimes it’s good to
+ forget. If you’re analyzing a text corpus and come to the end of a 
+document, for example, you may have no reason to believe that the next 
+document has any relationship to it whatsoever, and therefore the memory
+ cell should be set to zero before the net ingests the first element of 
+the next document.</p>
+<p>In the diagram below, you can see the gates at work, with straight 
+lines representing closed gates, and blank circles representing open 
+ones. The lines and circles running horizontal down the hidden layer are
+ the forget gates.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/gates_lstm.png" alt="Alt text"></p>
+<p>It should be noted that while feedforward networks map one input to 
+one output, recurrent nets can map one to many, as above (one image to 
+many words in a caption), many to many (translation), or many to one 
+(classifying a voice).</p>
+<h2 id="capturing-diverse-time-scales-and-remote-dependencies"><a href="#capturing-diverse-time-scales-and-remote-dependencies"></a><a name="time">Capturing Diverse Time Scales and Remote Dependencies</a></h2>
+<p>You may also wonder what the precise value is of input gates that 
+protect a memory cell from new data coming in, and output gates that 
+prevent it from affecting certain outputs of the RNN. You can think of 
+LSTMs as allowing a neural network to operate on different scales of 
+time at once.</p>
+<p>Let’s take a human life, and imagine that we are receiving various 
+streams of data about that life in a time series. Geolocation at each 
+time step is pretty important for the next time step, so that scale of 
+time is always open to the latest information.</p>
+<p>Perhaps this human is a diligent citizen who votes every couple 
+years. On democratic time, we would want to pay special attention to 
+what they do around elections, before they return to making a living, 
+and away from larger issues. We would not want to let the constant noise
+ of geolocation affect our political analysis.</p>
+<p>If this human is also a diligent daughter, then maybe we can 
+construct a familial time that learns patterns in phone calls which take
+ place regularly every Sunday and spike annually around the holidays. 
+Little to do with political cycles or geolocation.</p>
+<p>Other data is like that. Music is polyrhythmic. Text contains 
+recurrent themes at varying intervals. Stock markets and economies 
+experience jitters within longer waves. They operate simultaneously on 
+different time scales that LSTMs can capture.</p>
+<h3 id="gated-recurrent-units-grus"><a href="#gated-recurrent-units-grus">Gated Recurrent Units (GRUs)</a></h3>
+<p>A gated recurrent unit (GRU) is basically an LSTM without an output 
+gate, which therefore fully writes the contents from its memory cell to 
+the larger net at each time step.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/lstm_gru.png" alt="Alt text"></p>
+<h2 id="code-sample"><a href="#code-sample"></a><a name="code">Code Sample</a></h2>
+<p>A <a href="https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java">commented example of a Graves LSTM</a>
+ learning how to replicate Shakespearian drama, and implemented with 
+Deeplearning4j, can be found here. The API is commented where it’s not 
+self-explanatory. If you have questions, please join us on <a href="https://gitter.im/deeplearning4j/deeplearning4j">Gitter</a>.</p>
+<p>Here’s what the LSTM configuration looks like:</p>
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/GravesLSTMCharModellingExample.java"></script><script type="text/javascript" src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/prettify.js"></script><link rel="stylesheet" href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/embed.css"><link rel="stylesheet" href="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/prettify.css"><div class="gist-it-gist">
+<div class="gist-file">
+    <div class="gist-data">
+        
+        <pre class="prettyprint"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">//Set up network configuration:</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">MultiLayerConfiguration</span><span class="pln"> conf </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NeuralNetConfiguration</span><span class="pun">.</span><span class="typ">Builder</span><span class="pun">()</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">optimizationAlgo</span><span class="pun">(</span><span class="typ">OptimizationAlgorithm</span><span class="pun">.</span><span class="pln">STOCHASTIC_GRADIENT_DESCENT</span><span class="pun">).</span><span class="pln">iterations</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">learningRate</span><span class="pun">(</span><span class="lit">0.1</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">seed</span><span class="pun">(</span><span class="lit">12345</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">regularization</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">l2</span><span class="pun">(</span><span class="lit">0.001</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">weightInit</span><span class="pun">(</span><span class="typ">WeightInit</span><span class="pun">.</span><span class="pln">XAVIER</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">updater</span><span class="pun">(</span><span class="typ">Updater</span><span class="pun">.</span><span class="pln">RMSPROP</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">list</span><span class="pun">()</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">layer</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">GravesLSTM</span><span class="pun">.</span><span class="typ">Builder</span><span class="pun">().</span><span class="pln">nIn</span><span class="pun">(</span><span class="pln">iter</span><span class="pun">.</span><span class="pln">inputColumns</span><span class="pun">()).</span><span class="pln">nOut</span><span class="pun">(</span><span class="pln">lstmLayerSize</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">activation</span><span class="pun">(</span><span class="typ">Activation</span><span class="pun">.</span><span class="pln">TANH</span><span class="pun">).</span><span class="pln">build</span><span class="pun">())</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">layer</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">GravesLSTM</span><span class="pun">.</span><span class="typ">Builder</span><span class="pun">().</span><span class="pln">nIn</span><span class="pun">(</span><span class="pln">lstmLayerSize</span><span class="pun">).</span><span class="pln">nOut</span><span class="pun">(</span><span class="pln">lstmLayerSize</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">activation</span><span class="pun">(</span><span class="typ">Activation</span><span class="pun">.</span><span class="pln">TANH</span><span class="pun">).</span><span class="pln">build</span><span class="pun">())</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">layer</span><span class="pun">(</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">RnnOutputLayer</span><span class="pun">.</span><span class="typ">Builder</span><span class="pun">(</span><span class="typ">LossFunction</span><span class="pun">.</span><span class="pln">MCXENT</span><span class="pun">).</span><span class="pln">activation</span><span class="pun">(</span><span class="typ">Activation</span><span class="pun">.</span><span class="pln">SOFTMAX</span><span class="pun">)</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com">//MCXENT + softmax for classification</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">nIn</span><span class="pun">(</span><span class="pln">lstmLayerSize</span><span class="pun">).</span><span class="pln">nOut</span><span class="pun">(</span><span class="pln">nOut</span><span class="pun">).</span><span class="pln">build</span><span class="pun">())</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">backpropType</span><span class="pun">(</span><span class="typ">BackpropType</span><span class="pun">.</span><span class="typ">TruncatedBPTT</span><span class="pun">).</span><span class="pln">tBPTTForwardLength</span><span class="pun">(</span><span class="pln">tbpttLength</span><span class="pun">).</span><span class="pln">tBPTTBackwardLength</span><span class="pun">(</span><span class="pln">tbpttLength</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">pretrain</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">).</span><span class="pln">backprop</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">build</span><span class="pun">();</span></pre>
+        
+    </div>
+    
+    <div class="gist-meta">
+        
+        <span><a href="https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java">This Gist</a> brought to you by <a href="https://gist-it.appspot.com/">gist-it</a>.</span>
+        
+        <span style="float: right; color: #369;"><a href="https://github.com/deeplearning4j/dl4j-examples/raw/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java">view raw</a></span>
+        <span style="float: right; margin-right: 8px;">
+            <a style="color: rgb(102, 102, 102);" href="https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java">dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java</a></span>
+            <!-- Generated by: https://gist-it.appspot.com -->
+    </div>
+    
+</div>
+</div><script type="text/javascript">prettyPrint();</script>
+<p align="center">
+<a href="https://skymind.ai/quickstart?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387" type="button" class="btn btn-lg btn-success" onclick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+</p>
+<h2 id="lstm-hyperparameter-tuning"><a href="#lstm-hyperparameter-tuning"></a><a name="tuning">LSTM Hyperparameter Tuning</a></h2>
+<p>Here are a few ideas to keep in mind when manually optimizing hyperparameters for RNNs:</p>
+<ul>
+<li>Watch out for <em>overfitting</em>, which happens when a neural 
+network essentially “memorizes” the training data. Overfitting means you
+ get great performance on training data, but the network’s model is 
+useless for out-of-sample prediction.</li>
+<li>Regularization helps: regularization methods include l1, l2, and dropout among others.</li>
+<li>So have a separate test set on which the network doesn’t train.</li>
+<li>The larger the network, the more powerful, but it’s also easier to 
+overfit. Don’t want to try to learn a million parameters from 10,000 
+examples – <code class="highlighter-rouge">parameters &gt; examples = trouble</code>.</li>
+<li>More data is almost always better, because it helps fight overfitting.</li>
+<li>Train over multiple epochs (complete passes through the dataset).</li>
+<li>Evaluate test set performance at each epoch to know when to stop (early stopping).</li>
+<li>The learning rate is the single most important hyperparameter. Tune this using <a href="https://deeplearning4j.org/visualization">deeplearning4j-ui</a>; see <a href="https://cs231n.github.io/neural-networks-3/#baby">this graph</a></li>
+<li>In general, stacking layers can help.</li>
+<li>For LSTMs, use the softsign (not softmax) activation function over 
+tanh (it’s faster and less prone to saturation (~0 gradients)).</li>
+<li>Updaters: RMSProp, AdaGrad or momentum (Nesterovs) are usually good 
+choices. AdaGrad also decays the learning rate, which can help 
+sometimes.</li>
+<li>Finally, remember data normalization, MSE loss function + identity activation function for regression, <a href="https://deeplearning4j.org/glossary.html#xavier">Xavier weight initialization</a></li>
+</ul>
+<h2 id="resources"><a href="#resources"></a><a name="resources">Resources</a></h2>
+<ul>
+<li><a href="https://arxiv.org/pdf/1502.04623v2.pdf">DRAW: A Recurrent Neural Network For Image Generation</a>; (attention models)</li>
+<li><a href="https://arxiv.org/pdf/1502.02367v4.pdf">Gated Feedback Recurrent Neural Networks</a></li>
+<li><a href="http://people.idsia.ch/~juergen/rnn.html">Recurrent Neural Networks</a>; Juergen Schmidhuber</li>
+<li><a href="https://class.coursera.org/neuralnets-2012-001/lecture/77">Modeling Sequences With RNNs and LSTMs</a>; Geoff Hinton</li>
+<li><a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a>; Andrej Karpathy</li>
+<li><a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTMs</a>; Christopher Olah</li>
+<li><a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2015/pdfs/Werbos.backprop.pdf">Backpropagation Through Time: What It Does and How to Do It</a>; Paul Werbos</li>
+<li><a href="https://arxiv.org/pdf/1412.3555v1.pdf">Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</a>; Cho et al</li>
+<li><a href="https://www.cs.utoronto.ca/~ilya/pubs/ilya_sutskever_phd_thesis.pdf">Training Recurrent Neural Networks</a>; Ilya Sutskever’s Dissertation</li>
+<li><a href="http://www.cs.toronto.edu/~graves/phd.pdf">Supervised Sequence Labelling with Recurrent Neural Networks</a>; Alex Graves</li>
+<li><a href="http://www.felixgers.de/papers/phd.pdf">Long Short-Term Memory in Recurrent Neural Networks</a>; Felix Gers</li>
+<li><a href="https://arxiv.org/pdf/1503.04069.pdf">LSTM: A Search Space Oddyssey</a>; Klaus Greff et al</li>
+</ul>
+<h3 id="more-machine-learning-tutorials"><a href="#more-machine-learning-tutorials"></a><a name="beginner">More Machine Learning Tutorials</a></h3>
+<ul>
+<li><a href="https://deeplearning4j.org/neuralnet-overview.html">Introduction to Neural Networks</a></li>
+<li><a href="https://deeplearning4j.org/deepreinforcementlearning.html">Beginner’s Guide to Reinforcement Learning</a></li>
+<li><a href="https://deeplearning4j.org/convolutionalnetwork.html">Convolutional Networks (CNNs)</a></li>
+<li><a href="https://deeplearning4j.org/multilayerperceptron">Multilayer Perceptron (MLPs) for Classification</a></li>
+<li><a href="https://deeplearning4j.org/generative-adversarial-network">Generative Adversarial Networks (GANs)</a></li>
+ <li><a href="https://deeplearning4j.org/graphanalytics.html">Graph Data and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/word2vec.html">Word2Vec: Neural Embeddings for NLP</a></li>
+<li><a href="https://deeplearning4j.org/symbolicreasoning.html">Symbolic Reasoning (Symbolic AI) &amp; Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/markovchainmontecarlo.html">Markov Chain Monte Carlo &amp; Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/restrictedboltzmannmachine.html">Restricted Boltzmann Machines</a></li>
+<li><a href="https://deeplearning4j.org/eigenvector.html">Eigenvectors, Eigenvalues, Covariance, PCA and Entropy</a></li>
+<li><a href="https://deeplearning4j.org/logistic-regression.html">Neural Networks &amp; Regression</a></li>
+<li><a href="https://deeplearning4j.org/decision-tree.html">Introduction to Decision Trees</a></li>
+<li><a href="https://deeplearning4j.org/random-forest.html">Introduction to Random Forests</a></li>
+<li><a href="https://deeplearning4j.org/opendata.html">Open Datasets for Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/ai-machinelearning-deeplearning.html">AI vs. Machine Learning vs. Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/machine-learning-server.html">Inference in Production: Machine Learning Model Server</a></li>
+</ul>
+<h3 id="footnotes"><a href="#footnotes">Footnotes</a></h3>
+<p><a name="one">1)</a> <em>While recurrent networks may seem like a far
+ cry from general artificial intelligence, it’s our belief that 
+intelligence, in fact, is probably dumber than we thought. That is, with
+ a simple feedback loop to serve as memory, we have one of the basic 
+ingredients of consciousness – a necessary but insufficient component. 
+Others, not discussed above, might include additional variables that 
+represent the network and its state, and a framework for decisionmaking 
+logic based on interpretations of data. The latter, ideally, would be 
+part of a larger problem-solving loop that rewards success and punishes 
+failure, much like reinforcement learning. Come to think of it, <a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">DeepMind already built that</a>…</em></p>
+<p><a name="two">2)</a> <em>All neural networks whose parameters have 
+been optimized have memory in a sense, because those parameters are the 
+traces of past data. But in feedforward networks, that memory may be 
+frozen in time. That is, after a network is trained, the model it learns
+ may be applied to more data without further adapting itself. In 
+addition, it is monolithic in the sense that the same memory (or set of 
+weights) is applied to all incoming data. Recurrent networks, which also
+ go by the name of dynamic (translation: “changing”) neural networks, 
+are distinguished from feedforward nets not so much by having memory as 
+by giving particular weight to events that occur in a series. While 
+those events do not need to follow each other immediately, they are 
+presumed to be linked, however remotely, by the same temporal thread. 
+Feedforward nets do not make such a presumption. They treat the world as
+ a bucket of objects without order or time. It may be helpful to map two
+ types of neural network to two types of human knowledge. When we are 
+children, we learn to recognize colors, and we go through the rest of 
+our lives recognizing colors wherever we see them, in highly varied 
+contexts and independent of time. We only had to learn the colors once. 
+That knowledge is like memory in feedforward nets; they rely on a past 
+without scope, undefined. Ask them what colors they were fed five 
+minutes ago and they don’t know or care. They are short-term amnesiacs. 
+On the other hand, we also learn as children to decipher the flow of 
+sound called language, and the meanings we extract from sounds such as 
+“toe” or “roe” or “z” are always highly dependent on the sounds 
+preceding (and following) them. Each step of the sequence builds on what
+ went before, and meaning emerges from their order. Indeed, whole 
+sentences conspire to convey the meaning of each syllable within them, 
+their redundant signals acting as a protection against ambient noise. 
+That is similar to the memory of recurrent nets, which look to a 
+particular slice of the past for help. Both types of nets bring the 
+past, or different pasts, to bear in different ways.</em></p>
+ </article>
+
+</div>
+</main>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'deeplearning4j/deeplearning4j',
+    activationElement: false
+  };
+</script>
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/sidecar.js" async="" defer="defer"></script>
+<div class="dl4j-gitter-open-chat-button js-gitter-toggle-chat-button animated rubberBand"><i class="fa fa-comments-o" aria-hidden="true"></i> Chat with us on Gitter</div>
+
+<footer class="site-footer">
+<div class="container">
+<a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="row">
+<div class="col-md-6 col-sm-6">
+<ul class="footer-menu">
+<li><a href="https://github.com/deeplearning4j/">Github</a></li>
+<li><a href="https://twitter.com/deeplearning4j">Tweets</a></li>
+<li><a href="https://www.facebook.com/deeplearning4j/">Facebook</a>
+</li><li><a href="https://deeplearning4j.org/cn/index">中文</a></li>
+<li><a href="https://deeplearning4j.org/ja-index">日本語</a></li>
+<li><a href="https://deeplearning4j.org/kr-index">한글</a></li>
+<li><a href="http://nd4j.org/?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">ND4J</a></li>
+</ul>
+</div>
+<div class="col-md-6 col-sm-6">
+<p>Copyright © 2017. <a href="https://www.skymind.io/?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522760206790.1522760206790.1&amp;__hssc=3042607.1.1522760206790&amp;__hsfp=3656311387">Skymind</a>. DL4J is licensed Apache 2.0.</p>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/theDocs_002.js"></script><aside class="gitter-chat-embed is-collapsed"><div class="gitter-chat-embed-action-bar"><a class="gitter-chat-embed-action-bar-item gitter-chat-embed-action-bar-item-pop-out" aria-label="Open Chat in Gitter.im" href="https://gitter.im/deeplearning4j/deeplearning4j" target="_blank"></a><button class="gitter-chat-embed-action-bar-item gitter-chat-embed-action-bar-item-collapse-chat" aria-label="Collapse Gitter Chat"></button></div><div class="gitter-chat-embed-loading-wrapper">
+        <div class="gitter-chat-embed-loading-indicator gitter-icon"></div>
+      </div></aside>
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/theDocs.js"></script>
+
+
+<script>
+jQuery(function($) {
+$(".sidenav a").filter(function() {
+return this.href == window.location;
+}).addClass('active').closest('ul').prev('a').click();
+});
+</script>
+
+
+
+<script src="A%20Beginner's%20Guide%20to%20Recurrent%20Networks%20and%20LSTMs%20-%20Deeplearning4j%20%20Open-source,%20Distributed%20Deep%20Learning%20for%20the%20JVM_files/c.js" charset="utf-8" type="text/javascript"></script><style id="wistia_19_style" type="text/css" class="wistia_injected_style">
+@font-face {
+font-family: 'WistiaPlayerOverpassNumbers';
+src: url(data:application/x-font-ttf;charset=utf-8;base64,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);
+}
+</style></body></html>

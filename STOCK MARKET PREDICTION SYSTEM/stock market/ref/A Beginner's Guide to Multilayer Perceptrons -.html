@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head>
+<style>.gitter-hidden{box-sizing:border-box;display:none}.gitter-icon{box-sizing:border-box;width:22px;height:22px;fill:currentColor}.gitter-chat-embed{box-sizing:border-box;z-index:100;position:fixed;top:0;left:60%;bottom:0;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;background-color:#fff;border-left:1px solid #333;box-shadow:-12px 0 18px 0 rgba(50,50,50,.3);transition:-webkit-transform .3s cubic-bezier(.16,.22,.22,1.7);transition:transform .3s cubic-bezier(.16,.22,.22,1.7);transition:transform .3s cubic-bezier(.16,.22,.22,1.7),-webkit-transform .3s cubic-bezier(.16,.22,.22,1.7)}@context border-box{.gitter-chat-embed{box-sizing:border-box;background-color:#fff}}.gitter-chat-embed.is-collapsed:not(.is-loading){box-sizing:border-box;-webkit-transform:translateX(110%);transform:translateX(110%)}.gitter-chat-embed:after{box-sizing:border-box;content:"";z-index:-1;position:absolute;top:0;left:100%;bottom:0;right:-100%;background-color:#fff}@context border-box{.gitter-chat-embed:after{box-sizing:border-box;background-color:#fff}}@media(max-width:1150px){.gitter-chat-embed{box-sizing:border-box;left:45%}}@media(max-width:944px){.gitter-chat-embed{box-sizing:border-box;left:30%}}@media(max-width:600px){.gitter-chat-embed{box-sizing:border-box;left:15%}}@media(max-width:500px){.gitter-chat-embed{box-sizing:border-box;left:0;border-left:none}}.gitter-chat-embed>iframe{box-sizing:border-box;-webkit-box-flex:1;-ms-flex:1;flex:1;width:100%;height:100%;border:0}.gitter-chat-embed-loading-wrapper{box-sizing:border-box;position:absolute;top:0;left:0;bottom:0;right:0;display:none;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.is-loading .gitter-chat-embed-loading-wrapper{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex}.gitter-chat-embed-loading-indicator{box-sizing:border-box;opacity:.75;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIGZpbGw9IiMzYTMxMzMiPjxwYXRoIGQ9Ik01MjYgMTM5NHEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41cS01MiAwLTkwLTM4dC0zOC05MHEwLTUzIDM3LjUtOTAuNXQ5MC41LTM3LjUgOTAuNSAzNy41IDM3LjUgOTAuNXptNDk4IDIwNnEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41LTkwLjUtMzcuNS0zNy41LTkwLjUgMzcuNS05MC41IDkwLjUtMzcuNSA5MC41IDM3LjUgMzcuNSA5MC41em0tNzA0LTcwNHEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41LTkwLjUtMzcuNS0zNy41LTkwLjUgMzcuNS05MC41IDkwLjUtMzcuNSA5MC41IDM3LjUgMzcuNSA5MC41em0xMjAyIDQ5OHEwIDUyLTM4IDkwdC05MCAzOHEtNTMgMC05MC41LTM3LjV0LTM3LjUtOTAuNSAzNy41LTkwLjUgOTAuNS0zNy41IDkwLjUgMzcuNSAzNy41IDkwLjV6bS05NjQtOTk2cTAgNjYtNDcgMTEzdC0xMTMgNDctMTEzLTQ3LTQ3LTExMyA0Ny0xMTMgMTEzLTQ3IDExMyA0NyA0NyAxMTN6bTExNzAgNDk4cTAgNTMtMzcuNSA5MC41dC05MC41IDM3LjUtOTAuNS0zNy41LTM3LjUtOTAuNSAzNy41LTkwLjUgOTAuNS0zNy41IDkwLjUgMzcuNSAzNy41IDkwLjV6bS02NDAtNzA0cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNiA1Ni0xMzYgMTM2LTU2IDEzNiA1NiA1NiAxMzZ6bTUzMCAyMDZxMCA5My02NiAxNTguNXQtMTU4IDY1LjVxLTkzIDAtMTU4LjUtNjUuNXQtNjUuNS0xNTguNXEwLTkyIDY1LjUtMTU4dDE1OC41LTY2cTkyIDAgMTU4IDY2dDY2IDE1OHoiLz48L3N2Zz4=);-webkit-animation:spin 2s infinite linear;animation:spin 2s infinite linear}@-webkit-keyframes spin{0%{box-sizing:border-box;-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{box-sizing:border-box;-webkit-transform:rotate(359.9deg);transform:rotate(359.9deg)}}@keyframes spin{0%{box-sizing:border-box;-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{box-sizing:border-box;-webkit-transform:rotate(359.9deg);transform:rotate(359.9deg)}}.gitter-chat-embed-action-bar{position:absolute;top:0;left:0;right:0;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-bottom:.7em;background:linear-gradient(180deg,#fff 0,#fff 50%,hsla(0,0%,100%,0))}.gitter-chat-embed-action-bar,.gitter-chat-embed-action-bar-item{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex}.gitter-chat-embed-action-bar-item{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:40px;height:40px;padding-left:0;padding-right:0;opacity:.65;background:none;background-position:50%;background-repeat:no-repeat;background-size:22px 22px;border:0;outline:none;cursor:pointer;cursor:hand;transition:all .2s ease}.gitter-chat-embed-action-bar-item:focus,.gitter-chat-embed-action-bar-item:hover{box-sizing:border-box;opacity:1}.gitter-chat-embed-action-bar-item:active{box-sizing:border-box;-webkit-filter:hue-rotate(80deg) saturate(150);filter:hue-rotate(80deg) saturate(150)}.gitter-chat-embed-action-bar-item-pop-out{box-sizing:border-box;margin-right:-4px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTcxLjQyOSIgZmlsbD0iIzNhMzEzMyI+PHBhdGggZD0iTTE1Ny4xNDMsMTAzLjU3MXYzNS43MTRjMCw4Ljg1NC0zLjE0NCwxNi40MjYtOS40MzEsMjIuNzEzcy0xMy44NTgsOS40MzEtMjIuNzEyLDkuNDMxSDMyLjE0MyBjLTguODU0LDAtMTYuNDI1LTMuMTQ0LTIyLjcxMi05LjQzMVMwLDE0OC4xNCwwLDEzOS4yODVWNDYuNDI5YzAtOC44NTQsMy4xNDQtMTYuNDI1LDkuNDMxLTIyLjcxMiBjNi4yODctNi4yODcsMTMuODU4LTkuNDMxLDIyLjcxMi05LjQzMWg3OC41NzJjMS4wNDEsMCwxLjg5NiwwLjMzNSwyLjU2NiwxLjAwNGMwLjY3LDAuNjcsMS4wMDQsMS41MjUsMS4wMDQsMi41NjdWMjUgYzAsMS4wNDItMC4zMzQsMS44OTctMS4wMDQsMi41NjdjLTAuNjcsMC42Ny0xLjUyNSwxLjAwNC0yLjU2NiwxLjAwNEgzMi4xNDNjLTQuOTExLDAtOS4xMTUsMS43NDktMTIuNjEyLDUuMjQ2IHMtNS4yNDYsNy43MDEtNS4yNDYsMTIuNjEydjkyLjg1NmMwLDQuOTExLDEuNzQ5LDkuMTE1LDUuMjQ2LDEyLjYxMnM3LjcwMSw1LjI0NSwxMi42MTIsNS4yNDVIMTI1YzQuOTEsMCw5LjExNS0xLjc0OCwxMi42MTEtNS4yNDUgYzMuNDk3LTMuNDk3LDUuMjQ2LTcuNzAxLDUuMjQ2LTEyLjYxMnYtMzUuNzE0YzAtMS4wNDIsMC4zMzQtMS44OTcsMS4wMDQtMi41NjdjMC42Ny0wLjY2OSwxLjUyNS0xLjAwNCwyLjU2Ny0xLjAwNGg3LjE0MyBjMS4wNDIsMCwxLjg5NywwLjMzNSwyLjU2NywxLjAwNEMxNTYuODA5LDEwMS42NzQsMTU3LjE0MywxMDIuNTI5LDE1Ny4xNDMsMTAzLjU3MXogTTIwMCw3LjE0M3Y1Ny4xNDMgYzAsMS45MzUtMC43MDcsMy42MDktMi4xMjEsNS4wMjJjLTEuNDEzLDEuNDE0LTMuMDg4LDIuMTIxLTUuMDIxLDIuMTIxYy0xLjkzNSwwLTMuNjA5LTAuNzA3LTUuMDIyLTIuMTIxbC0xOS42NDQtMTkuNjQzIGwtNzIuNzY3LDcyLjc2OWMtMC43NDQsMC43NDQtMS42LDEuMTE1LTIuNTY3LDEuMTE1cy0xLjgyMy0wLjM3MS0yLjU2Ny0xLjExNUw3Ny41NjcsMTA5LjcxYy0wLjc0NC0wLjc0NC0xLjExNi0xLjYtMS4xMTYtMi41NjcgYzAtMC45NjcsMC4zNzItMS44MjIsMS4xMTYtMi41NjZsNzIuNzY4LTcyLjc2OGwtMTkuNjQ0LTE5LjY0M2MtMS40MTMtMS40MTQtMi4xMi0zLjA4OC0yLjEyLTUuMDIyYzAtMS45MzUsMC43MDctMy42MDksMi4xMi01LjAyMiBDMTMyLjEwNSwwLjcwNywxMzMuNzc5LDAsMTM1LjcxNSwwaDU3LjE0M2MxLjkzNCwwLDMuNjA4LDAuNzA3LDUuMDIxLDIuMTIxQzE5OS4yOTMsMy41MzQsMjAwLDUuMjA4LDIwMCw3LjE0M3oiLz48L3N2Zz4=)}.gitter-chat-embed-action-bar-item-collapse-chat{box-sizing:border-box;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzEuNDI5IDE3MS40MjkiIGZpbGw9IiMzYTMxMzMiPjxwYXRoIGQ9Ik0xMjIuNDMzLDEwNi4xMzhsLTE2LjI5NSwxNi4yOTVjLTAuNzQ0LDAuNzQ0LTEuNiwxLjExNi0yLjU2NiwxLjExNmMtMC45NjgsMC0xLjgyMy0wLjM3Mi0yLjU2Ny0xLjExNmwtMTUuMjktMTUuMjkgbC0xNS4yOSwxNS4yOWMtMC43NDQsMC43NDQtMS42LDEuMTE2LTIuNTY3LDEuMTE2cy0xLjgyMy0wLjM3Mi0yLjU2Ny0xLjExNmwtMTYuMjk0LTE2LjI5NWMtMC43NDQtMC43NDQtMS4xMTYtMS42LTEuMTE2LTIuNTY2IGMwLTAuOTY4LDAuMzcyLTEuODIzLDEuMTE2LTIuNTY3bDE1LjI5LTE1LjI5bC0xNS4yOS0xNS4yOWMtMC43NDQtMC43NDQtMS4xMTYtMS42LTEuMTE2LTIuNTY3czAuMzcyLTEuODIzLDEuMTE2LTIuNTY3IEw2NS4yOSw0OC45OTZjMC43NDQtMC43NDQsMS42LTEuMTE2LDIuNTY3LTEuMTE2czEuODIzLDAuMzcyLDIuNTY3LDEuMTE2bDE1LjI5LDE1LjI5bDE1LjI5LTE1LjI5IGMwLjc0NC0wLjc0NCwxLjYtMS4xMTYsMi41NjctMS4xMTZjMC45NjcsMCwxLjgyMiwwLjM3MiwyLjU2NiwxLjExNmwxNi4yOTUsMTYuMjk0YzAuNzQ0LDAuNzQ0LDEuMTE2LDEuNiwxLjExNiwyLjU2NyBzLTAuMzcyLDEuODIzLTEuMTE2LDIuNTY3bC0xNS4yOSwxNS4yOWwxNS4yOSwxNS4yOWMwLjc0NCwwLjc0NCwxLjExNiwxLjYsMS4xMTYsMi41NjcgQzEyMy41NDksMTA0LjUzOSwxMjMuMTc3LDEwNS4zOTQsMTIyLjQzMywxMDYuMTM4eiBNMTQ2LjQyOSw4NS43MTRjMC0xMS4wMTItMi43MTctMjEuMTY4LTguMTQ4LTMwLjQ2OSBzLTEyLjc5Ny0xNi42NjctMjIuMDk4LTIyLjA5OFM5Ni43MjYsMjUsODUuNzE0LDI1cy0yMS4xNjgsMi43MTYtMzAuNDY5LDguMTQ3UzM4LjU3OSw0NS45NDUsMzMuMTQ3LDU1LjI0NlMyNSw3NC43MDMsMjUsODUuNzE0IHMyLjcxNiwyMS4xNjgsOC4xNDcsMzAuNDY5czEyLjc5NywxNi42NjYsMjIuMDk4LDIyLjA5OHMxOS40NTcsOC4xNDgsMzAuNDY5LDguMTQ4czIxLjE2OC0yLjcxNywzMC40NjktOC4xNDggczE2LjY2Ni0xMi43OTcsMjIuMDk4LTIyLjA5OFMxNDYuNDI5LDk2LjcyNiwxNDYuNDI5LDg1LjcxNHogTTE3MS40MjksODUuNzE0YzAsMTUuNTUxLTMuODMyLDI5Ljg5My0xMS40OTYsNDMuMDI0IGMtNy42NjQsMTMuMTMzLTE4LjA2MiwyMy41My0zMS4xOTQsMzEuMTk0Yy0xMy4xMzIsNy42NjQtMjcuNDc0LDExLjQ5Ni00My4wMjQsMTEuNDk2cy0yOS44OTItMy44MzItNDMuMDI0LTExLjQ5NiBjLTEzLjEzMy03LjY2NC0yMy41MzEtMTguMDYyLTMxLjE5NC0zMS4xOTRDMy44MzIsMTE1LjYwNywwLDEwMS4yNjUsMCw4NS43MTRTMy44MzIsNTUuODIyLDExLjQ5Niw0Mi42OSBjNy42NjQtMTMuMTMzLDE4LjA2Mi0yMy41MzEsMzEuMTk0LTMxLjE5NEM1NS44MjIsMy44MzIsNzAuMTY0LDAsODUuNzE0LDBzMjkuODkzLDMuODMyLDQzLjAyNCwxMS40OTYgYzEzLjEzMyw3LjY2NCwyMy41MywxOC4wNjIsMzEuMTk0LDMxLjE5NEMxNjcuNTk3LDU1LjgyMiwxNzEuNDI5LDcwLjE2NCwxNzEuNDI5LDg1LjcxNHoiLz48L3N2Zz4=)}.gitter-open-chat-button{z-index:100;position:fixed;bottom:0;right:10px;padding:1em 3em;background-color:#36bc98;border:0;border-top-left-radius:.5em;border-top-right-radius:.5em;font-family:sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-align:center;text-decoration:none;cursor:pointer;cursor:hand;transition:all .3s ease}.gitter-open-chat-button,.gitter-open-chat-button:visited{box-sizing:border-box;color:#fff}.gitter-open-chat-button:focus,.gitter-open-chat-button:hover{box-sizing:border-box;background-color:#3ea07f;color:#fff}.gitter-open-chat-button:focus{box-sizing:border-box;box-shadow:0 0 8px rgba(62,160,127,.6);outline:none}.gitter-open-chat-button:active{box-sizing:border-box;color:#eee}.gitter-open-chat-button.is-collapsed{box-sizing:border-box;-webkit-transform:translateY(120%);transform:translateY(120%)}</style><link href="https://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Open-Source Deep-Learning Software for Java and Scala on Hadoop and Spark">
+<meta name="author" content="Chris V. Nicholson, Adam Gibson, Skymind team">
+<title>
+    
+      A Beginner's Guide to Multilayer Perceptrons - Deeplearning4j: Open-source, Distributed Deep Learning for the JVM
+    
+  </title>
+
+<link href="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/theDocs.css" rel="stylesheet">
+<link href="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/skin-dark.css" rel="stylesheet">
+
+<link rel="stylesheet" href="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/animate.css">
+
+<link href="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/dl4j.css" rel="stylesheet">
+
+<link href="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/css.css" rel="stylesheet" type="text/css">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://deeplearning4j.org/assets/themes/thedocs/img/apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" href="https://deeplearning4j.org/assets/themes/thedocs/img/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://deeplearning4j.org/atom.xml">
+
+<script type="text/javascript" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/pd.js"></script><script type="text/javascript" async="" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/linkid.js"></script><script type="text/javascript" async="" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/geH.js"></script><script src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/5605.js" async="" type="text/javascript"></script><script src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/2179705_002.js" type="text/javascript" id="hs-analytics"></script><script async="" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/analytics.js"></script><script async="" defer="defer" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/buttons.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48811288-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+  ga('require', 'displayfeatures');
+  </script>
+
+
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0025/5605.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+
+
+<script type="text/javascript" id="hs-script-loader" async="" defer="defer" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/2179705.js"></script>
+
+
+<script type="text/javascript">
+  piAId = '457082';
+  piCId = '66281';
+  piHostname = 'pi.pardot.com';
+
+  (function() {
+  	function async_load(){
+  		var s = document.createElement('script'); s.type = 'text/javascript';
+  		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+  		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  	}
+  	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  	else { window.addEventListener('load', async_load, false); }
+  })();
+  </script>
+
+
+<script src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/2296590312.js"></script>
+
+
+
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css" id="ki-m1i-moe"></style><style type="text/css" id="ki-m1i-mc4"></style><script type="text/javascript" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/analytics"></script></head>
+<body>
+
+<script type="text/javascript">
+    var _kiq = _kiq || [];
+    (function(){
+      setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+      s.async = true; s.src = '//s3.amazonaws.com/ki.js/68133/geH.js'; f.parentNode.insertBefore(s, f);
+      }, 1);
+    })();
+  </script>
+<style>
+  /* Fix subscribe form formatting */
+  li.subscribe-form {
+    padding: 2px 20px !important;
+  }
+
+  .hs-richtext {
+    margin-bottom: -30px;
+  }
+
+  .hs-button {
+    background-color: #2196f3;
+    border-color: #2196f3;
+    color: #fff;
+    margin-top: 10px;
+  }
+
+</style>
+
+<header class="site-header navbar-fullwidth">
+
+<nav class="navbar navbar-default">
+<div class="container">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+<span class="glyphicon glyphicon-option-vertical"></span>
+</button>
+<button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://deeplearning4j.org/index.html"><span class="force-middle"></span><img src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/DL4J.png" alt="Deeplearning4j"></a>
+</div>
+
+
+<div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+<ul class="nav navbar-nav navbar-right">
+<li class="hero"><a href="https://deeplearning4j.org/quickstart">Quickstart</a></li>
+<li><a href="https://deeplearning4j.org/documentation">Documentation</a></li>
+<li><a href="https://deeplearning4j.org/gpu">GPUs</a></li>
+<li><a href="https://deeplearning4j.org/spark">Spark</a></li>
+<li><a href="https://deeplearning4j.org/lstm">LSTM</a></li>
+<li><a href="https://deeplearning4j.org/about">About</a></li>
+<li><a href="http://newsletter.deeplearning4j.org/l/456082/2017-12-06/dxd853" target="_blank">Newsletter</a></li>
+</ul>
+</div>
+<div class="github-ribbon">
+<a href="https://github.com/deeplearning4j/deeplearning4j"><img style="position: absolute; top: 0; right: 0; border: 0;" src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+</div>
+
+</div>
+</nav>
+
+</header>
+
+
+<aside class="sidebar sidebar-boxed sidebar-dark">
+<a class="sidebar-brand" href="https://deeplearning4j.org/index.html"><img src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/DL4J.png" alt="Deeplearning4j"></a>
+<ul class="sidenav dropable sticky" style="height: 433px;">
+<li><a href="https://www.amazon.com/Deep-Learning-Practitioners-Adam-Gibson/dp/1491914254" target="_blank">Deep Learning Textbook</a></li>
+<li><a href="https://skymind.ai/platform?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387" target="_blank">Download SKIL Community Edition</a></li>
+<li>
+<a href="#" class="has-child">Getting Started</a>
+<ul>
+<li><a href="https://deeplearning4j.org/overview">DeepLearning4J Overview</a></li>
+<li><a href="https://deeplearning4j.org/quickstart">Quickstart: Running DL4J</a></li>
+<li><a href="https://deeplearning4j.org/core-concepts">DeepLearning4J: Core Concepts</a></li>
+<li><a href="https://deeplearning4j.org/gettingstarted">Comprehensive Setup Guide</a></li>
+<li><a href="https://deeplearning4j.org/quickref">Quick Reference: Layers &amp; Functionality</a><a></a></li><a>
+</a><li><a></a><a href="https://deeplearning4j.org/buildinglocally">Build Locally From Master</a></li>
+<li><a href="https://deeplearning4j.org/maven">Use the Maven Build Tool</a></li>
+<li><a href="https://deeplearning4j.org/buildtools">Or Configure DL4J in Ivy, Gradle, SBT etc.</a></li>
+<li><a href="http://nd4j.org/gpu_native_backends.html?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">Swap CPUs for GPUs</a></li>
+<li><a href="https://deeplearning4j.org/benchmark">DeepLearning4J Benchmarks</a></li>
+<li><a href="https://docs.skymind.ai/v1.0.3/reference?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">Machine learning server API docs</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Tutorials</a>
+<ul>
+<li><a href="https://deeplearning4j.org/tutorials">Deep Learning Tutorial Index</a></li>
+<li><a href="https://deeplearning4j.org/mnist-for-beginners">MNIST for Beginners</a></li>
+<li><a href="https://deeplearning4j.org/usingrnns">Using Recurrent Nets in DL4J</a></li>
+<li><a href="http://nd4j.org/userguide?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">Use ND4J for Scientific Computing</a></li>
+<li><a href="https://deeplearning4j.org/datavec">DataVec: Vectorization and Preprocessing for Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/updater">Neural Net Updaters: SGD, Adam, Adagrad, Adadelta, RMSProp</a></li>
+<li><a href="https://deeplearning4j.org/welldressed-recommendation-engine">Build a Recommendation Engine With DL4J</a></li>
+<li><a href="https://deeplearning4j.org/build_vgg_webapp">Build a Web Application for Image Classification</a></li>
+<li><a href="https://deeplearning4j.org/android">Deploy Deeplearning4j to Android</a></li>
+<li><a href="https://deeplearning4j.org/artificial-intelligence-ai.html">What is Artificial Intelligence (AI)?</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Introduction to Deep Learning</a>
+<ul>
+<li><a href="https://deeplearning4j.org/neuralnet-overview">Introduction to Neural Networks</a></li>
+<li><a href="https://deeplearning4j.org/questions">Questions to Ask When Applying DL</a></li>
+<li><a href="https://deeplearning4j.org/deeplearningforbeginners.html">Deep Learning for Beginners</a></li>
+<li><a href="https://deeplearning4j.org/use_cases">Deep Learning Use Cases</a></li>
+<li><a href="https://deeplearning4j.org/accuracy">Deep Learning's Accuracy</a></li>
+<li><a href="https://deeplearning4j.org/ai-machinelearning-deeplearning">AI, Machine Learning and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/data-for-deep-learning.html">The Data You Need For Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/multinetwork">Multilayer Neural Nets</a></li>
+<li><a href="https://deeplearning4j.org/neuralnetworktable">Choosing a Neural Network</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child open">Neural Networks</a>
+<ul style="display: block;">
+<li><a href="https://deeplearning4j.org/lstm">Long Short-Term Memory Units</a></li>
+<li><a href="https://deeplearning4j.org/convolutionalnetwork">Convolutional Nets for Image Processing</a></li>
+<li><a href="https://deeplearning4j.org/recurrentnetwork">Recurrent Nets and LSTMs</a></li>
+<li><a href="https://deeplearning4j.org/word2vec">Word2Vec: Neural Word Embeddings</a></li>
+<li><a href="https://deeplearning4j.org/restrictedboltzmannmachine">Restricted Boltzmann Machines</a></li>
+<li><a href="https://deeplearning4j.org/multilayerperceptron" class="active">Multilayer Perceptron</a></li>
+<li><a href="https://deeplearning4j.org/deepautoencoder">Deep AutoEncoder</a></li>
+<li><a href="https://deeplearning4j.org/denoisingautoencoder">Denoising Autoencoders</a></li>
+<li><a href="https://deeplearning4j.org/stackeddenoisingautoencoder">Stacked Denoising Autoencoders</a></li>
+<li><a href="https://deeplearning4j.org/building-neural-net-with-dl4j">Building a Neural Net with DeepLearning4J</a></li>
+<li><a href="https://deeplearning4j.org/evaluation">Evaluating Neural Nets</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Data &amp; ETL</a>
+<ul>
+<li><a href="https://deeplearning4j.org/etl-userguide">ETL User Guide</a></li>
+<li><a href="https://deeplearning4j.org/datavec">DataVec: ETL for Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/workspaces">Workspaces</a></li>
+<li><a href="https://deeplearning4j.org/image-data-pipeline.html#record">Build a Data Pipeline</a></li>
+<li><a href="https://deeplearning4j.org/simple-image-load-transform">Customize an Image Pipeline</a></li>
+<li><a href="https://deeplearning4j.org/datavecdoc/">DataVec Javadoc: DataVec Methods &amp; Classes for ETL</a></li>
+<li><a href="https://deeplearning4j.org/data-sets-ml">Datasets and Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/customdatasets">Custom Datasets</a></li>
+<li><a href="https://deeplearning4j.org/csv-deep-learning">CSV Data Uploads</a></li>
+<li><a href="https://deeplearning4j.org/opendata">Open Data for Machine Learning</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Tuning &amp; Training</a>
+<ul>
+<li><a href="https://deeplearning4j.org/memory">Memory management options</a></li>
+<li><a href="https://deeplearning4j.org/spark">Training Neural Networks with Apache Spark</a></li>
+<li><a href="https://deeplearning4j.org/distributed">Apache Spark &amp; DL4J Parameter Server</a></li>
+<li><a href="https://deeplearning4j.org/iterativereduce">Distributed Training: Iterative Reduce Defined</a></li>
+<li><a href="https://deeplearning4j.org/visualization">Visualize, Monitor and Debug Network Learning</a></li>
+<li><a href="https://deeplearning4j.org/troubleshootingneuralnets">Troubleshoot Training &amp; Select Network Hyperparameters</a></li>
+<li><a href="https://deeplearning4j.org/earlystopping">Train Networks using Early Stopping</a></li>
+<li><a href="https://deeplearning4j.org/output">Interpret Neural Net Output</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Advanced Usage</a>
+<ul>
+<li><a href="https://deeplearning4j.org/spark-gpus">Running Deep Learning on Distributed GPUs With Spark</a></li>
+<li><a href="https://deeplearning4j.org/model-zoo">Model Zoo: Pre-trained Models</a></li>
+<li><a href="https://deeplearning4j.org/modelpersistence">Save and Load Models</a></li>
+<li><a href="https://deeplearning4j.org/tsne-visualization">Visualize Data with t-SNE</a></li>
+<li><a href="https://deeplearning4j.org/logistic-regression">Perform Regression With Neural Nets</a></li>
+<li><a href="https://deeplearning4j.org/usingrnns">Use Recurrent Networks in DL4J</a></li>
+<li><a href="https://deeplearning4j.org/compgraph">Build Complex Network Architectures with Computation Graph</a></li>
+<li><a href="https://deeplearning4j.org/devops-machine-learning">DevOps for Machine Learning</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Open-Source Community</a>
+<ul>
+<li><a href="https://deeplearning4j.org/devguide">Contribute to DL4J (Developer Guide)</a></li>
+
+<li><a href="https://deeplearning4j.org/features">Features</a></li>
+<li><a href="https://deeplearning4j.org/roadmap">Roadmap</a></li>
+<li><a href="https://deeplearning4j.org/releasenotes">Latest Release Notes</a></li>
+<li><a href="https://deeplearning4j.org/doc">Javadoc: DL4J Methods and Classes</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Natural Language Processing</a>
+<ul>
+<li><a href="https://deeplearning4j.org/nlp">DL4J's NLP Functionality</a></li>
+<li><a href="https://deeplearning4j.org/word2vec">Word2vec for Java and Scala</a></li>
+<li><a href="https://deeplearning4j.org/doc2vec">Doc2vec for Java and Scala</a></li>
+<li><a href="https://deeplearning4j.org/textanalysis">Textual Analysis and DL</a></li>
+<li><a href="https://deeplearning4j.org/bagofwords-tf-idf">Bag of Words</a></li>
+ <li><a href="https://deeplearning4j.org/sentenceiterator">Sentence and Document Segmentation</a></li>
+<li><a href="https://deeplearning4j.org/tokenization">Tokenization</a></li>
+<li><a href="https://deeplearning4j.org/vocabcache">Vocab Cache</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">ND4J: Numpy for the JVM</a>
+<ul>
+<li><a href="http://nd4j.org/backend.html?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">ND4J Backends: Hardware Acceleration on CPUs and GPUs</a></li>
+<li><a href="http://nd4j.org/userguide?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">ND4J User Guide</a></li>
+<li><a href="http://nd4j.org/doc/?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">ND4J Javadoc</a></li>
+<li><a href="https://deeplearning4j.org/jumpy">Jumpy: Numpy Arrays for the JVM</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">More Resources</a>
+<ul>
+<li><a href="https://deeplearning4j.org/eigenvector">Eigenvectors, PCA, Covariance and Entropy</a></li>
+<li><a href="https://deeplearning4j.org/thoughtvectors">Thought Vectors, AI and NLP</a></li>
+<li><a href="https://deeplearning4j.org/markovchainmontecarlo">Monte Carlo, Markov Chains and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/unsupervised-learning">Unsupervised Learning: Use Cases</a></li>
+<li><a href="https://deeplearning4j.org/deepreinforcementlearning">DL and Reinforcement Learning</a></li>
+<li><a href="https://deeplearning4j.org/symbolicreasoning">Symbolic AI and Machine Learning</a></li>
+<li><a href="https://deeplearning4j.org/graphanalytics">Graph Analytics and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/decision-tree">Decision Trees</a></li>
+<li><a href="https://deeplearning4j.org/random-forest">Random Forests</a></li>
+<li><a href="https://deeplearning4j.org/scala">Scala, Spark and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/compare-dl4j-tensorflow-pytorch">DL4J, TensorFlow, Pytorch, Caffe</a></li>
+<li><a href="https://deeplearning4j.org/glossary">Glossary of Terms for Deep Learning and Neural Nets</a></li>
+<li><a href="https://deeplearning4j.org/deeplearningpapers">Free Online Courses, Tutorials and Papers</a></li>
+<li><a href="https://deeplearning4j.org/deeplearningtranslated">Deep Learning in Other Languages</a></li>
+</ul>
+</li>
+<li>
+<a href="#" class="has-child">Other Languages</a>
+<ul>
+<li><a href="https://deeplearning4j.org/cn/index">中文</a></li>
+<li><a href="https://deeplearning4j.org/ja-index">日本語</a></li>
+<li><a href="https://deeplearning4j.org/kr-index">한글</a></li>
+</ul>
+</li>
+</ul>
+</aside>
+
+<main class="container-fluid">
+<div class="row">
+
+<article class="main-content" role="main">
+<h1 id="a-beginners-guide-to-multilayer-perceptrons"><a href="#a-beginners-guide-to-multilayer-perceptrons">A Beginner’s Guide to Multilayer Perceptrons</a></h1>
+<ul>
+<li><a href="#perceptron">A Brief History of Perceptrons</a></li>
+<li><a href="#mlp">Multilayer Perceptrons</a></li>
+<li><a href="#code">Just Show Me the Code</a></li>
+<li><a href="#footnote">FootNotes</a></li>
+<li><a href="#reading">Further Reading</a></li>
+</ul>
+<h2 id="a-brief-history-of-perceptrons"><a href="#a-brief-history-of-perceptrons"></a><a name="perceptron">A Brief History of Perceptrons</a></h2>
+<p>The perceptron, that neural network whose name evokes how the future 
+looked in the 1950s, is a simple algorithm intended to perform binary 
+classification; i.e. it predicts whether input belongs to a certain 
+category of interest or not: <code class="highlighter-rouge">fraud</code> or <code class="highlighter-rouge">not_fraud</code>, <code class="highlighter-rouge">cat</code> or <code class="highlighter-rouge">not_cat</code>.</p>
+<p>The perceptron holds a special place in the history of neural 
+networks and artificial intelligence, because the initial hype about its
+ performance led to a <a href="https://drive.google.com/file/d/1UsoYSWypNjRth-Xs81FsoyqWDSdnhjIB/view?usp=sharing">rebuttal by Minsky and Papert</a>,
+ and wider spread backlash that cast a pall on neural network research 
+for decades, a neural net winter that wholly thawed only with Geoff 
+Hinton’s research in the 2000s, the results of which have since swept 
+the machine-learning community.</p>
+<p>Frank Rosenblatt, godfather of the perceptron, popularized it as a 
+device rather than an algorithm. The perceptron first entered the world 
+as hardware.<sup><a href="#one">1</a></sup> Rosenblatt, a psychologist 
+who studied and later lectured at Cornell University, received funding 
+from the U.S. Office of Naval Research to build a machine that could 
+learn. His machine, the Mark I perceptron, looked like this.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/Mark_I_perceptron.jpg" alt="Alt text"></p>
+<p align="center">
+<a href="https://docs.skymind.ai/docs/welcome?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387" type="button" class="btn btn-lg btn-success" onclick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH PERCEPTRONS</a>
+</p>
+<p>A perceptron is a linear classifier; that is, it is an algorithm that
+ classifies input by separating two categories with a straight line. 
+Input is typically a feature vector <code class="highlighter-rouge">x</code> multiplied by weights <code class="highlighter-rouge">w</code> and added to a bias <code class="highlighter-rouge">b</code>: <code class="highlighter-rouge">y = w * x + b</code>.</p>
+<p>A perceptron produces a single output based on several real-valued 
+inputs by forming a linear combination using its input weights (and 
+sometimes passing the output through a nonlinear activation function). 
+Here’s how you can write that in math:</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/perceptron_formula.html" alt="Alt text"></p>
+<p>where <strong>w</strong> denotes the vector of weights, <strong>x</strong> is the vector of inputs, <strong>b</strong> is the bias and phi is the non-linear activation function.</p>
+<p>Rosenblatt built a single-layer perceptron. That is, his 
+hardware-algorithm did not include multiple layers, which allow neural 
+networks to model a feature hierarchy. It was, therefore, a shallow 
+neural network, which prevented his perceptron from performing 
+non-linear classification, such as the XOR function (an XOR operator 
+trigger when input exhibits either one trait or another, but not both; 
+it stands for “exclusive OR”), as Minsky and Papert showed in their 
+book.</p>
+<p><img src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/XORfunction.png" alt="Alt text"></p>
+<h2 id="multilayer-perceptrons-mlp"><a href="#multilayer-perceptrons-mlp"></a><a name="mlp">Multilayer Perceptrons (MLP)</a></h2>
+<p>Subsequent work with multilayer perceptrons has shown that they are 
+capable of approximating an XOR operator as well as many other 
+non-linear functions.</p>
+<p>Just as Rosenblatt based the perceptron on a <a href="http://web.csulb.edu/~cwallis/artificialn/History.htm">McCulloch-Pitts neuron</a>,
+ conceived in 1943, so too, perceptrons themselves are building blocks 
+that only prove to be useful in such larger functions as multilayer 
+perceptrons.<a name="two">2)</a></p>
+<p>The multilayer perceptron is the hello world of deep learning: a good place to start when you are learning about deep learning.</p>
+<p>A multilayer perceptron (MLP) is a <a href="https://deeplearning4j.org/neuralnet-overview">deep, artificial neural network</a>.
+ It is composed of more than one perceptron. They are composed of an 
+input layer to receive the signal, an output layer that makes a decision
+ or prediction about the input, and in between those two, an arbitrary 
+number of hidden layers that are the true computational engine of the 
+MLP. MLPs with one hidden layer are capable of approximating any 
+continuous function.</p>
+<p>Multilayer perceptrons are often applied to supervised learning problems<sup><a href="#three">3</a></sup>:
+ they train on a set of input-output pairs and learn to model the 
+correlation (or dependencies) between those inputs and outputs. Training
+ involves adjusting the parameters, or the weights and biases, of the 
+model in order to minimize error. Backpropagation is used to make those 
+weigh and bias adjustments relative to the error, and the error itself 
+can be measured in a variety of ways, including by root mean squared 
+error (RMSE).</p>
+<p>Feedforward networks such as MLPs are like tennis, or ping pong. They
+ are mainly involved in two motions, a constant back and forth. You can 
+think of this ping pong of guesses and answers as a kind of accelerated 
+science, since each guess is a test of what we think we know, and each 
+response is feedback letting us know how wrong we are.</p>
+<p>In the <em>forward pass</em>, the signal flow moves from the input 
+layer through the hidden layers to the output layer, and the decision of
+ the output layer is measured against the ground truth labels.</p>
+<p>In the <em>backward pass</em>, using backpropagation and the chain 
+rule of calculus, partial derivatives of the error function w.r.t. the 
+various weights and biases are back-propagated through the MLP. That act
+ of differentiation gives us a gradient, or a landscape of error, along 
+which the parameters may be adjusted as they move the MLP one step 
+closer to the error minimum. This can be done with any gradient-based 
+optimisation algorithm such as stochastic gradient descent. The network 
+keeps playing that game of tennis until the error can go no lower. This 
+state is known as <em>convergence</em>.</p>
+<h2 id="just-show-me-the-code"><a href="#just-show-me-the-code"></a><a name="code">Just Show Me the Code</a></h2>
+<p>Eclipse Deeplearning4j includes <a href="https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/feedforward/classification">several examples of multilayer perceptrons</a>, or MLPs, which rely on so-called dense layers.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+                .seed(seed)
+                .iterations(1)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+                .learningRate(learningRate)
+                .updater(Updater.NESTEROVS)     //To configure: .updater(new Nesterovs(0.9))
+                .list()
+                .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes)
+                        .weightInit(WeightInit.XAVIER)
+                        .activation(Activation.RELU)
+                        .build())
+                .layer(1, new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD)
+                        .weightInit(WeightInit.XAVIER)
+                        .activation(Activation.SOFTMAX).weightInit(WeightInit.XAVIER)
+                        .nIn(numHiddenNodes).nOut(numOutputs).build())
+                .pretrain(false).backprop(true).build();</code></pre></div></div>
+<p><a href="https://keras.io/getting-started/sequential-model-guide/">In Keras</a>, you would use <code class="highlighter-rouge">SequentialModel</code> to create a linear stack of layers:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">from</span> <span class="n">keras</span><span class="p">.</span><span class="n">models</span> <span class="n">import</span> <span class="n">Sequential</span>
+<span class="k">from</span> <span class="n">keras</span><span class="p">.</span><span class="n">layers</span> <span class="n">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span>
+
+<span class="k">model</span> <span class="p">=</span> <span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">Dense</span><span class="p">(</span><span class="m">32</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">=(</span><span class="m">784</span><span class="p">,)),</span>
+    <span class="n">Activation</span><span class="p">(</span><span class="s1">'relu'</span><span class="p">),</span>
+    <span class="n">Dense</span><span class="p">(</span><span class="m">10</span><span class="p">),</span>
+    <span class="n">Activation</span><span class="p">(</span><span class="s1">'softmax'</span><span class="p">),</span>
+<span class="p">])</span></code></pre></div></div>
+<h2 id="footnotes"><a href="#footnotes"></a><a name="footnote">Footnotes</a></h2>
+<p><a name="one">1)</a> <em>The interesting thing to point out here is 
+that software and hardware exist on a flowchart: software can be 
+expressed as hardware and vice versa. When chips such as FPGAs are 
+programmed, or ASICs are constructed to bake a certain algorithm into 
+silicon, we are simply implementing software one level down to make it 
+work faster. Likewise, what is baked in silicon or wired together with 
+lights and potentiometers, like Rosenblatt’s Mark I, can also be 
+expressed symbolically in code. This is why Alan Kay has said “People 
+who are really serious about software should make their own hardware.” 
+But there’s no free lunch; i.e. what you gain in speed by baking 
+algorithms into silicon, you lose in flexibility, and vice versa. This 
+happens to be a real problem with regards to machine learning, since the
+ algorithms alter themselves through exposure to data. The challenge is 
+to find those parts of the algorithm that remain stable even as 
+parameters change; e.g. the linear algebra operations that are currently
+ processed most quickly by GPUs.</em></p>
+<p><a name="two">2)</a> <em>Your thoughts may incline towards the next 
+step in ever more complex and also more useful algorithms. We move from 
+one neuron to several, called a layer; we move from one layer to 
+several, called a multilayer perceptron. Can we move from one MLP to 
+several, or do we simply keep piling on layers, as Microsoft did with 
+its ImageNet winner, ResNet, which had more than 150 layers? Or is the 
+right combination of MLPs an ensemble of many algorithms voting in a 
+sort of computational democracy on the best prediction? Or is it 
+embedding one algorithm within another, as we do with <a href="https://deeplearning4j.org/graphdata">graph convolutional networks</a>?</em></p>
+<p><a name="three">3)</a> <em>They are widely used at Google, which is 
+probably the most sophisticated AI company in the world, for a wide 
+array of tasks, despite the existence of more complex, state-of-the-art 
+methods.</em></p>
+<h2 id="further-reading"><a href="#further-reading"></a><a name="reading">Further Reading</a></h2>
+<ul>
+<li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.335.3398&amp;rep=rep1&amp;type=pdf">The
+ Perceptron: A Probabilistic Model for Information Storage and 
+Organization in the Brain, Cornell Aeronautical Laboratory, 
+Psychological Review, by Frank Rosenblatt, 1958 (PDF)</a></li>
+<li><a href="https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf">A Logical Calculus of Ideas Immanent in Nervous Activity, W. S. McCulloch &amp; Walter Pitts, 1943</a></li>
+<li><a href="https://drive.google.com/file/d/1UsoYSWypNjRth-Xs81FsoyqWDSdnhjIB/view?usp=sharing">Perceptrons: An Introduction to Computational Geometry, by Marvin Minsky &amp; Seymour Papert</a></li>
+<li><a href="http://users.ics.aalto.fi/ahonkela/dippa/node41.html">Multi-Layer Perceptrons (MLP)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hebbian_theory">Hebbian Theory</a></li>
+</ul>
+<h3 id="other-machine-learning-tutorials"><a href="#other-machine-learning-tutorials"></a><a name="beginner">Other Machine Learning Tutorials</a></h3>
+<ul>
+<li><a href="https://deeplearning4j.org/neuralnet-overview">Introduction to Neural Networks</a></li>
+<li><a href="https://deeplearning4j.org/deepreinforcementlearning">Deep Reinforcement Learning</a></li>
+<li><a href="https://deeplearning4j.org/symbolicreasoning">Symbolic AI and Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/graphdata">Using Graph Data with Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/lstm">Recurrent Networks and LSTMs</a></li>
+<li><a href="https://deeplearning4j.org/word2vec">Word2Vec: Neural Embeddings for NLP</a></li>
+<li><a href="https://deeplearning4j.org/restrictedboltzmannmachine">Restricted Boltzmann Machines</a></li>
+<li><a href="https://deeplearning4j.org/eigenvector">Eigenvectors, Covariance, PCA and Entropy</a></li>
+<li><a href="https://deeplearning4j.org/logistic-regression">Neural Networks &amp; Regression</a></li>
+<li><a href="https://deeplearning4j.org/convolutionalnets">Convolutional Networks (CNNs)</a></li>
+<li><a href="https://deeplearning4j.org/opendata">Open Datasets for Deep Learning</a></li>
+<li><a href="https://deeplearning4j.org/modelserver">Inference: Machine Learning Model Server</a></li>
+</ul>
+<h3 id="classic-neural-network-papers-pre-2012"><a href="#classic-neural-network-papers-pre-2012">Classic Neural Network Papers (pre-2012)</a></h3>
+<ul>
+<li>An analysis of single-layer networks in unsupervised feature learning (2011), A. Coates et al. <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf">[pdf]</a></li>
+<li>Deep sparse rectifier neural networks (2011), X. Glorot et al. <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf">[pdf]</a></li>
+<li>Natural language processing (almost) from scratch (2011), R. Collobert et al. <a href="https://arxiv.org/pdf/1103.0398">[pdf]</a></li>
+<li>Recurrent neural network based language model (2010), T. Mikolov et al. <a href="http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf">[pdf]</a></li>
+<li>Stacked denoising autoencoders: Learning useful representations in a
+ deep network with a local denoising criterion (2010), P. Vincent et al.
+ <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.3484&amp;rep=rep1&amp;type=pdf">[pdf]</a></li>
+<li>Learning mid-level features for recognition (2010), Y. Boureau <a href="http://ece.duke.edu/~lcarin/boureau-cvpr-10.pdf">[pdf]</a></li>
+<li>A practical guide to training restricted boltzmann machines (2010), G. Hinton <a href="http://www.csri.utoronto.ca/~hinton/absps/guideTR.pdf">[pdf]</a></li>
+<li>Understanding the difficulty of training deep feedforward neural networks (2010), X. Glorot and Y. Bengio <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf">[pdf]</a></li>
+<li>Why does unsupervised pre-training help deep learning (2010), D. Erhan et al. <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf">[pdf]</a></li>
+<li>Learning deep architectures for AI (2009), Y. Bengio. <a href="http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf">[pdf]</a></li>
+<li>Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations (2009), H. Lee et al. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&amp;rep=rep1&amp;type=pdf">[pdf]</a></li>
+<li>Greedy layer-wise training of deep networks (2007), Y. Bengio et al. <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf">[pdf]</a></li>
+<li>Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov. <a href="http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf">[pdf]</a></li>
+<li>A fast learning algorithm for deep belief nets (2006), G. Hinton et al. <a href="http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf">[pdf]</a></li>
+<li>Gradient-based learning applied to document recognition (1998), Y. LeCun et al. <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">[pdf]</a></li>
+<li>Long short-term memory (1997), S. Hochreiter and J. Schmidhuber. <a href="http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735">[pdf]</a></li>
+</ul>
+</article>
+
+</div>
+</main>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'deeplearning4j/deeplearning4j',
+    activationElement: false
+  };
+</script>
+<script src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/sidecar.js" async="" defer="defer"></script>
+<div class="dl4j-gitter-open-chat-button js-gitter-toggle-chat-button animated rubberBand"><i class="fa fa-comments-o" aria-hidden="true"></i> Chat with us on Gitter</div>
+
+<footer class="site-footer">
+<div class="container">
+<a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="row">
+<div class="col-md-6 col-sm-6">
+<ul class="footer-menu">
+<li><a href="https://github.com/deeplearning4j/">Github</a></li>
+<li><a href="https://twitter.com/deeplearning4j">Tweets</a></li>
+<li><a href="https://www.facebook.com/deeplearning4j/">Facebook</a>
+</li><li><a href="https://deeplearning4j.org/cn/index">中文</a></li>
+<li><a href="https://deeplearning4j.org/ja-index">日本語</a></li>
+<li><a href="https://deeplearning4j.org/kr-index">한글</a></li>
+<li><a href="http://nd4j.org/?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">ND4J</a></li>
+</ul>
+</div>
+<div class="col-md-6 col-sm-6">
+<p>Copyright © 2017. <a href="https://www.skymind.io/?__hstc=3042607.b94d79d9c7b1a52e2c217cbc8d7ffe34.1522760206790.1522762943790.1522766652902.3&amp;__hssc=3042607.1.1522766652902&amp;__hsfp=3656311387">Skymind</a>. DL4J is licensed Apache 2.0.</p>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/theDocs_002.js"></script>
+<script src="A%20Beginner's%20Guide%20to%20Multilayer%20Perceptrons%20-_files/theDocs.js"></script>
+
+
+<script>
+jQuery(function($) {
+$(".sidenav a").filter(function() {
+return this.href == window.location;
+}).addClass('active').closest('ul').prev('a').click();
+});
+</script>
+
+
+
+<aside class="gitter-chat-embed is-collapsed"><div class="gitter-chat-embed-action-bar"><a class="gitter-chat-embed-action-bar-item gitter-chat-embed-action-bar-item-pop-out" aria-label="Open Chat in Gitter.im" href="https://gitter.im/deeplearning4j/deeplearning4j" target="_blank"></a><button class="gitter-chat-embed-action-bar-item gitter-chat-embed-action-bar-item-collapse-chat" aria-label="Collapse Gitter Chat"></button></div><div class="gitter-chat-embed-loading-wrapper">
+        <div class="gitter-chat-embed-loading-indicator gitter-icon"></div>
+      </div></aside><style id="wistia_19_style" type="text/css" class="wistia_injected_style">
+@font-face {
+font-family: 'WistiaPlayerOverpassNumbers';
+src: url(data:application/x-font-ttf;charset=utf-8;base64,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);
+}
+</style></body></html>

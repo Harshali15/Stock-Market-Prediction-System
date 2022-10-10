@@ -1,0 +1,122 @@
+																	%%%%%%%%%%%%%%%%%%%%%%%%
+																	%    Sheetal Girase    %
+																	%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report}
+
+
+\setlength{\textwidth}{6.25in} % original 6.25
+\setlength{\textheight}{9in}
+\renewcommand{\baselinestretch}{1.3}
+
+\oddsidemargin 0.3in   %  Left margin on odd-numbered pages.
+%\evensidemargin 20pt   %  Note that \oddsidemargin = \evensidemargin
+\topmargin  -0.6in     %  Nominal distance from top of page to top of
+
+\usepackage {subfigure}
+\usepackage {acronym}
+\usepackage{multirow}
+
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.jpg,.JPG}
+
+\begin{document}
+
+%\begin{titlepage}
+%\input{hardcover}
+%\end{titlepage}
+
+\pagenumbering{}
+\begin{titlepage}
+\input{cover}
+\end{titlepage}
+
+\begin{titlepage}
+\input{certificate}
+\end{titlepage}
+
+
+%\input{certificate}
+
+
+\newpage 
+\input{acknowledgements}
+
+\newpage
+\pagenumbering{Roman}
+\input{abstract}
+%\pagenumbering{Roman}
+
+%\newpage
+\addcontentsline{toc}{section}{Abstract}
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+\tableofcontents
+%\addtocontents{toc}{My figure}
+
+
+\newpage 
+\pagenumbering{arabic}
+
+%*********************************************************%
+% HEADERS N FOOTERS %
+
+\setlength{\headheight}{12pt}
+ 
+\pagestyle{\fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+ 
+\lhead{\fancyplain{}}
+\chead{}
+\rhead{\fancyplain{}{\textit{\leftmark}}}
+\lfoot{}
+%\cfoot{\thepage\ of \pageref{LastPage}}
+\cfoot{\thepage}
+\rfoot{}
+%***********************************************************************%
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%% HEADERS N FOOTERS %%%%%%%%%%%%%%%%%%%
+
+%\setlength{\headheight}{15pt}
+ 
+%\pagestyle{fancyplain}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+ 
+%\lhead{\fancyplain{}}
+%\chead{}
+%\rhead{\fancyplain{}{\textit{\leftmark}}}
+%\lfoot{}
+%\cfoot{\thepage\ of \pageref{LastPage}}
+%\cfoot{\thepage}
+%\rfoot{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{chapter1}
+\input{chapter2}
+\input{chapter3}
+\input{chapter4}
+\input{chapter5}
+\input{chapter6}
+\input{chapter7}
+\input{conclusion}
+\input{references}
+\input{appendix}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

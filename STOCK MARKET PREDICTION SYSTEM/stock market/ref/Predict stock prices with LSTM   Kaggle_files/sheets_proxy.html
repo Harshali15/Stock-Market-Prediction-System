@@ -1,0 +1,25 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style nonce="q9obBYa1ZugxHovVckRTA1huQ59P0POrwTFOaZlrARg=">
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #intercom-messenger-sheet {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+      <iframe id="intercom-messenger-sheet" name="intercom-messenger-sheet" sandbox="allow-scripts allow-forms allow-same-origin allow-popups" allow="microphone *;">
+        &lt;p&gt;Your browser doesn't support iframe :(&lt;/p&gt;
+      </iframe>
+
+      <!-- Note: injected by wepack: ./app/sheet_proxy.js -->
+  <script nonce="q9obBYa1ZugxHovVckRTA1huQ59P0POrwTFOaZlrARg=" type="text/javascript">!function(e){function t(n){if(s[n])return s[n].exports;var o=s[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,t),o.l=!0,o.exports}var s={};t.m=e,t.c=s,t.d=function(e,s,n){t.o(e,s)||Object.defineProperty(e,s,{configurable:!1,enumerable:!0,get:n})},t.n=function(e){var s=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(s,"a",s),s},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="https://js.intercomcdn.com/",t(t.s=696)}({142:function(e,t,s){"use strict";function n(e,t,s){return{intercomSheet:{type:e,payload:t,meta:{proxy:s}}}}t.__esModule=!0,t.createMessage=n;t.SEND_DATA_TO_MESSENGER="send-data-to-messenger",t.SEND_DATA_TO_SHEET="send-data-to-sheet",t.CLOSE="close",t.SUBMIT_SHEET="submit-sheet",t.START_NAVIGATION="start-navigation",t.FINISH_NAVIGATION="finish-navigation",t.SET_TITLE="set-title"},696:function(e,t,s){e.exports=s(697)},697:function(e,t,s){"use strict";new(s(698).SheetProxy)},698:function(e,t,s){"use strict";function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}t.__esModule=!0,t.SheetProxy=t.APP_SHEET_FRAME_NAME=void 0;var o=s(142),r=s(699);t.APP_SHEET_FRAME_NAME="intercom-messenger-sheet",t.SheetProxy=function(){function e(){var t=this;n(this,e),this.sendMessageForHtmlLoad=function(){var e=(0,o.createMessage)(r.HTML_LOADED,void 0,o.SEND_DATA_TO_MESSENGER);t.sendMessageToMessenger(e)},this.handleIframeLoad=function(){var e=(0,o.createMessage)(r.SHEET_LOADED,void 0,o.SEND_DATA_TO_MESSENGER);t.sendMessageToMessenger(e)},this.handleMessage=function(e){var s=e.data||{},n=s.intercomSheet;if(!n||!n.meta)return null;switch(n.meta.proxy){case o.SEND_DATA_TO_MESSENGER:t.sendMessageToMessenger(e.data);break;case o.SEND_DATA_TO_SHEET:t.sendMessageToSheet(e.data)}},this.sendMessageForHtmlLoad(),this.findIframe(),this.setupProxyListeners(),this.setupIframeListeners()}return e.prototype.setupProxyListeners=function(){window.addEventListener("message",this.handleMessage,!1)},e.prototype.setupIframeListeners=function(){if(!this.iframe)return null;this.iframe.addEventListener("load",this.handleIframeLoad,!1)},e.prototype.findIframe=function(){if(this.iframe=document.querySelector("#intercom-messenger-sheet"),!this.iframe)throw new Error("SheetProxy: The iframe node does not exist")},e.prototype.sendMessageToMessenger=function(e){window.parent.postMessage(e,"*")},e.prototype.sendMessageToSheet=function(e){this.iframe.contentWindow.postMessage(e,"*")},e}()},699:function(e,t,s){"use strict";t.__esModule=!0;t.HTML_LOADED="html-loaded",t.SHEET_LOADED="sheet-loaded"}});</script>
+
+</body></html>
